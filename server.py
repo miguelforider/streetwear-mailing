@@ -1,0 +1,634 @@
+#!/usr/bin/env python3
+"""
+Streetwear & Moto Swipe File - Local Web Viewer
+Panel visual interactivo en http://localhost:8000 para analizar
+newsletters clasificadas por categorías: Moto, Streetwear y Técnica.
+"""
+
+import http.server
+import json
+import os
+import socketserver
+import subprocess
+import sys
+import urllib.parse
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+ARCHIVE_DIR = BASE_DIR / "archive"
+INDEX_FILE = ARCHIVE_DIR / "index.json"
+PORT = 8000
+
+
+HTML_PAGE = """<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streetwear & Moto - Swipe File</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #13151b;
+      --card-hover: #1a1e27;
+      --border: #222633;
+      --accent: #ff4d00;
+      --accent-glow: rgba(255, 77, 0, 0.18);
+      --moto: #e5a93c;
+      --streetwear: #ff4d00;
+      --tecnica: #00d285;
+      --text: #f0f2f5;
+      --text-muted: #848c9e;
+      --tag-bg: #1c202d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    /* SIDEBAR */
+    .sidebar {
+      width: 400px;
+      min-width: 360px;
+      background: var(--card);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .brand-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+    }
+    .brand-header h1 span { color: var(--accent); }
+    .sync-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .sync-btn:hover { opacity: 0.85; transform: scale(0.98); }
+    
+    /* CATEGORY TABS */
+    .cat-tabs {
+      display: flex;
+      background: #0e1015;
+      border-bottom: 1px solid var(--border);
+      padding: 6px 12px;
+      gap: 6px;
+    }
+    .cat-tab {
+      flex: 1;
+      text-align: center;
+      padding: 6px 4px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-radius: 6px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s;
+    }
+    .cat-tab:hover { color: #fff; background: var(--tag-bg); }
+    .cat-tab.active {
+      color: #fff;
+      background: var(--card-hover);
+      border-color: var(--border);
+    }
+    .cat-tab.active[data-cat="Directos moto"] { border-color: var(--moto); color: var(--moto); }
+    .cat-tab.active[data-cat="Streetwear"] { border-color: var(--streetwear); color: var(--streetwear); }
+    .cat-tab.active[data-cat="Técnica"] { border-color: var(--tecnica); color: var(--tecnica); }
+    
+    .filters {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .search-input {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .search-input:focus { border-color: var(--accent); }
+    
+    .brands-chips {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .brands-chips::-webkit-scrollbar { height: 4px; }
+    .brands-chips::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .chip {
+      background: var(--tag-bg);
+      border: 1px solid transparent;
+      padding: 4px 10px;
+      border-radius: 14px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      color: var(--text-muted);
+      transition: all 0.15s;
+    }
+    .chip:hover, .chip.active {
+      background: var(--accent-glow);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    
+    .email-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    .email-card {
+      padding: 14px;
+      border-radius: 8px;
+      background: transparent;
+      border: 1px solid transparent;
+      cursor: pointer;
+      margin-bottom: 6px;
+      transition: all 0.15s;
+    }
+    .email-card:hover {
+      background: var(--card-hover);
+    }
+    .email-card.active {
+      background: var(--card-hover);
+      border-color: var(--accent);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .card-tags {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .card-brand {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .cat-badge {
+      font-size: 0.65rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge-moto { background: rgba(229, 169, 60, 0.15); color: var(--moto); border: 1px solid rgba(229, 169, 60, 0.3); }
+    .badge-streetwear { background: rgba(255, 77, 0, 0.15); color: var(--streetwear); border: 1px solid rgba(255, 77, 0, 0.3); }
+    .badge-tecnica { background: rgba(0, 210, 133, 0.15); color: var(--tecnica); border: 1px solid rgba(0, 210, 133, 0.3); }
+
+    .card-date {
+      font-size: 0.73rem;
+      color: var(--text-muted);
+    }
+    .card-subject {
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #fff;
+      margin-bottom: 4px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-from {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    
+    /* MAIN PREVIEW AREA */
+    .preview-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: #000;
+    }
+    .preview-header {
+      padding: 16px 24px;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .preview-meta h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .preview-meta p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .preview-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .view-toggle {
+      display: flex;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2px;
+    }
+    .view-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .view-btn.active {
+      background: var(--card-hover);
+      color: #fff;
+    }
+    .action-btn {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .action-btn:hover { background: var(--card-hover); }
+    
+    .frame-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #101217;
+      overflow: hidden;
+      padding: 20px;
+    }
+    iframe {
+      border: none;
+      background: #fff;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      transition: width 0.3s ease;
+    }
+    iframe.mobile {
+      width: 390px;
+      max-height: 844px;
+      height: 100%;
+      border-radius: 36px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+      border: 10px solid #232838;
+    }
+    
+    .empty-state {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 40px;
+    }
+    .empty-state h3 { font-size: 1.2rem; color: #fff; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="brand-header">
+      <h1>Swipe <span>Mailing</span></h1>
+      <button class="sync-btn" onclick="syncEmails()">↻ Sync</button>
+    </div>
+
+    <!-- CATEGORY TABS -->
+    <div class="cat-tabs">
+      <div class="cat-tab active" data-cat="all" onclick="selectCategory('all')">Todas</div>
+      <div class="cat-tab" data-cat="Directos moto" onclick="selectCategory('Directos moto')">🏍️ Moto</div>
+      <div class="cat-tab" data-cat="Streetwear" onclick="selectCategory('Streetwear')">🛹 Streetwear</div>
+      <div class="cat-tab" data-cat="Técnica" onclick="selectCategory('Técnica')">⚡ Técnica</div>
+    </div>
+    
+    <div class="filters">
+      <input type="text" id="searchInput" class="search-input" placeholder="Buscar asunto o marca..." oninput="filterEmails()">
+      <div class="brands-chips" id="brandChips">
+        <div class="chip active" onclick="selectBrand('all')">Todas</div>
+      </div>
+    </div>
+    
+    <div class="email-list" id="emailList">
+      <!-- Rellenado por JS -->
+    </div>
+  </div>
+
+  <!-- MAIN PREVIEW -->
+  <div class="preview-area">
+    <div class="preview-header" id="previewHeader" style="display: none;">
+      <div class="preview-meta">
+        <h2 id="previewSubject">Asunto</h2>
+        <p id="previewDetails">De: Marca • Fecha</p>
+      </div>
+      <div class="preview-controls">
+        <div class="view-toggle">
+          <button class="view-btn active" id="btnDesktop" onclick="setViewMode('desktop')">Desktop</button>
+          <button class="view-btn" id="btnMobile" onclick="setViewMode('mobile')">Mobile (390px)</button>
+        </div>
+        <button class="action-btn" onclick="copySubject()">📋 Copiar Asunto</button>
+        <a id="btnOpenFull" class="action-btn" target="_blank" href="#">↗ Abrir pestaña</a>
+      </div>
+    </div>
+    
+    <div class="frame-container" id="frameContainer">
+      <div class="empty-state" id="emptyState">
+        <h3>Selecciona una newsletter</h3>
+        <p>Elige un correo del panel lateral para analizar su copy y diseño.</p>
+      </div>
+      <iframe id="emailFrame" style="display: none;"></iframe>
+    </div>
+  </div>
+
+  <script>
+    let emails = [];
+    let currentCategory = 'all';
+    let currentBrand = 'all';
+    let selectedEmail = null;
+
+    async function loadData() {
+      try {
+        const res = await fetch('/api/emails');
+        emails = await res.json();
+        renderBrandChips();
+        filterEmails();
+      } catch (err) {
+        console.error("Error cargando emails:", err);
+      }
+    }
+
+    function selectCategory(cat) {
+      currentCategory = cat;
+      currentBrand = 'all';
+      document.querySelectorAll('.cat-tab').forEach(t => {
+        t.classList.toggle('active', t.getAttribute('data-cat') === cat);
+      });
+      renderBrandChips();
+      filterEmails();
+    }
+
+    function renderBrandChips() {
+      const filteredByCat = currentCategory === 'all' 
+        ? emails 
+        : emails.filter(e => (e.category || 'Streetwear') === currentCategory);
+
+      const brands = [...new Set(filteredByCat.map(e => e.brand_name || e.brand).filter(Boolean))].sort();
+      const container = document.getElementById('brandChips');
+      container.innerHTML = `<div class="chip ${currentBrand === 'all' ? 'active' : ''}" onclick="selectBrand('all')">Todas (${filteredByCat.length})</div>`;
+      
+      brands.forEach(b => {
+        const count = filteredByCat.filter(e => (e.brand_name || e.brand) === b).length;
+        const chip = document.createElement('div');
+        chip.className = `chip ${currentBrand === b ? 'active' : ''}`;
+        chip.textContent = `${b} (${count})`;
+        chip.onclick = () => selectBrand(b);
+        container.appendChild(chip);
+      });
+    }
+
+    function selectBrand(brand) {
+      currentBrand = brand;
+      renderBrandChips();
+      filterEmails();
+    }
+
+    function getBadgeClass(cat) {
+      if (cat === 'Directos moto') return 'badge-moto';
+      if (cat === 'Técnica') return 'badge-tecnica';
+      return 'badge-streetwear';
+    }
+
+    function filterEmails() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      const filtered = emails.filter(e => {
+        const cat = e.category || 'Streetwear';
+        const brand = e.brand_name || e.brand || '';
+        const matchesCategory = (currentCategory === 'all' || cat === currentCategory);
+        const matchesBrand = (currentBrand === 'all' || brand === currentBrand);
+        const matchesQuery = !q || (
+          (e.subject && e.subject.toLowerCase().includes(q)) ||
+          brand.toLowerCase().includes(q) ||
+          cat.toLowerCase().includes(q) ||
+          (e.from_name && e.from_name.toLowerCase().includes(q))
+        );
+        return matchesCategory && matchesBrand && matchesQuery;
+      });
+      renderList(filtered);
+    }
+
+    function renderList(list) {
+      const container = document.getElementById('emailList');
+      container.innerHTML = '';
+      if (!list.length) {
+        container.innerHTML = '<div style="padding: 24px; text-align: center; color: var(--text-muted); font-size: 0.85rem;">No se encontraron correos en esta categoría.</div>';
+        return;
+      }
+      list.forEach(e => {
+        const card = document.createElement('div');
+        card.className = `email-card ${selectedEmail && selectedEmail.id === e.id ? 'active' : ''}`;
+        card.onclick = () => selectEmail(e);
+        const cat = e.category || 'Streetwear';
+        const brandName = e.brand_name || (e.brand || 'GENERAL').toUpperCase();
+        card.innerHTML = `
+          <div class="card-top">
+            <div class="card-tags">
+              <span class="card-brand">${brandName}</span>
+              <span class="cat-badge ${getBadgeClass(cat)}">${cat}</span>
+            </div>
+            <span class="card-date">${(e.date || '').split(' ')[0]}</span>
+          </div>
+          <div class="card-subject">${e.subject || '(Sin Asunto)'}</div>
+          <div class="card-from">${e.from_name || e.from_email || ''}</div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function selectEmail(e) {
+      selectedEmail = e;
+      filterEmails();
+      document.getElementById('emptyState').style.display = 'none';
+      const frame = document.getElementById('emailFrame');
+      frame.style.display = 'block';
+      frame.src = `/archive/${e.html_path}`;
+      
+      document.getElementById('previewHeader').style.display = 'flex';
+      document.getElementById('previewSubject').textContent = e.subject || '(Sin asunto)';
+      document.getElementById('previewDetails').textContent = `De: ${e.from_name} <${e.from_email}> • Categoría: ${e.category || 'Streetwear'} • ${e.date}`;
+      document.getElementById('btnOpenFull').href = `/archive/${e.html_path}`;
+    }
+
+    function setViewMode(mode) {
+      const frame = document.getElementById('emailFrame');
+      const btnD = document.getElementById('btnDesktop');
+      const btnM = document.getElementById('btnMobile');
+      if (mode === 'mobile') {
+        frame.classList.add('mobile');
+        btnM.classList.add('active');
+        btnD.classList.remove('active');
+      } else {
+        frame.classList.remove('mobile');
+        btnD.classList.add('active');
+        btnM.classList.remove('active');
+      }
+    }
+
+    function copySubject() {
+      if (selectedEmail && selectedEmail.subject) {
+        navigator.clipboard.writeText(selectedEmail.subject);
+        alert('¡Asunto copiado al portapapeles!');
+      }
+    }
+
+    async function syncEmails() {
+      const btn = document.querySelector('.sync-btn');
+      btn.textContent = '⏳ Sincronizando...';
+      try {
+        await fetch('/api/sync', { method: 'POST' });
+        await loadData();
+      } catch (err) {
+        alert('Error al sincronizar');
+      } finally {
+        btn.textContent = '↻ Sync';
+      }
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
+"""
+
+
+class SwipeFileHandler(http.server.SimpleHTTPRequestHandler):
+    def do_GET(self):
+        parsed = urllib.parse.urlparse(self.path)
+
+        if parsed.path == "/" or parsed.path == "/index.html":
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.end_headers()
+            self.wfile.write(HTML_PAGE.encode("utf-8"))
+            return
+
+        if parsed.path == "/api/emails":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.end_headers()
+            if INDEX_FILE.exists():
+                with open(INDEX_FILE, "r", encoding="utf-8") as f:
+                    self.wfile.write(f.read().encode("utf-8"))
+            else:
+                self.wfile.write(b"[]")
+            return
+
+        if parsed.path.startswith("/archive/"):
+            rel_path = parsed.path.replace("/archive/", "", 1)
+            target = ARCHIVE_DIR / rel_path
+            if target.exists() and target.is_file():
+                self.send_response(200)
+                if target.suffix == ".html":
+                    self.send_header("Content-Type", "text/html; charset=utf-8")
+                elif target.suffix == ".json":
+                    self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.end_headers()
+                with open(target, "rb") as f:
+                    self.wfile.write(f.read())
+                return
+
+        super().do_GET()
+
+    def do_POST(self):
+        parsed = urllib.parse.urlparse(self.path)
+        if parsed.path == "/api/sync":
+            fetcher_script = BASE_DIR / "fetch_newsletters.py"
+            try:
+                res = subprocess.run([sys.executable, str(fetcher_script)], capture_output=True, text=True)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"success": True, "output": res.stdout}).encode("utf-8"))
+            except Exception as e:
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"success": False, "error": str(e)}).encode("utf-8"))
+            return
+
+        self.send_response(404)
+        self.end_headers()
+
+
+def main():
+    os.chdir(BASE_DIR)
+    socketserver.TCPServer.allow_reuse_address = True
+    with socketserver.TCPServer(("", PORT), SwipeFileHandler) as httpd:
+        print(f"[✓] Servidor Swipe File disponible en: http://localhost:{PORT}")
+        print("    Presiona Ctrl+C para detener.")
+        try:
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            print("\nServidor detenido.")
+
+
+if __name__ == "__main__":
+    main()

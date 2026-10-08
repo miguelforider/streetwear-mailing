@@ -1,0 +1,810 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="x-apple-disable-message-reformatting">
+<meta content="width=device-width" name="viewport">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<!--[if gt mso 9]>
+    <style type="text/css">
+	  .noSerif {
+		font-family:Arial, Helvetica, sans-serif !important;
+		font-weight:normal !important;}
+        .msoBold {font-weight:bold !important;}
+      .msoNormal {font-weight:normal !important;}
+      .Serif {
+		font-family: Georgia, Times, serif !important; }
+      .MSOAvenirBold {
+      	font-family:Arial, Helvetica, sans-serif !important;
+      	font-weight:bold !important;}
+      .MSOAvenirNormal {
+      	font-family:Arial, Helvetica, sans-serif !important;
+      	font-weight:normal !important;}
+      .sup {
+		line-height: 0 !important; 
+		font-size: 70% !important; 
+		vertical-align: top !important; 
+		mso-text-raise:40% !important;}
+      .hyperlinkcolor {
+		color:#000000 !important;}
+      .winlink {
+		color:#000000 !important; 
+		text-decoration: underline !important;}
+      .winlinkwhite {
+		color:#FFFFFF !important; 
+		text-decoration: underline !important;}
+      <![endif]-->
+<!--fonts-->
+<title></title>
+<style>@font-face {
+    font-family: "Copernicus";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://images.patagonia.com/eMedia/fonts/GalaxieCopernicus/GalaxieCopernicus-Book.woff2) format("woff2")
+    }
+@font-face {
+    font-family: "Copernicus";
+    font-style: italic;
+    font-weight: 400;
+    src: url(https://images.patagonia.com/eMedia/fonts/GalaxieCopernicus/GalaxieCopernicus-BookItalic.woff2) format("woff2")
+    }
+@font-face {
+    font-family: "RidgewayEmail";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://images.patagonia.com/eMedia/fonts/RidgewaySans/static/RidgewaySans-Regular.woff2) format("woff2")
+    }
+@font-face {
+    font-family: "RidgewayEmail";
+    font-style: italic;
+    font-weight: 400;
+    src: url(https://images.patagonia.com/eMedia/fonts/RidgewaySans/static/RidgewaySans-RegularItalic.woff2) format("woff2")
+    }
+@font-face {
+    font-family: "RidgewayEmail";
+    font-style: medium;
+    font-weight: 500;
+    src: url(https://images.patagonia.com/eMedia/fonts/RidgewaySans/static/RidgewaySans-Medium.woff2) format("woff2")
+    }
+@font-face {
+    font-family: "RidgewayEmail";
+    font-style: italic;
+    font-weight: 500;
+    src: url(https://images.patagonia.com/eMedia/fonts/RidgewaySans/static/RidgewaySans-MediumItalic.woff2) format("woff2")
+    }
+@media only screen and (max-width: 600px), (max-device-width: 600px) {
+    .fluid {
+        width: 100% !important
+        }
+    }
+@media only screen and (max-width: 540px), (max-device-width: 540px) {
+    /*Display Classes*/
+    .hide {
+        display: none !important
+        }
+    .show {
+        display: inline !important
+        }
+    .block {
+        display: block !important
+        }
+    /*Width Classes*/
+    .inset {
+        width: 312px !important;
+        height: auto !important
+        }
+    .insetLG {
+        width: 320px !important;
+        height: auto !important
+        }
+    .insetGIF {
+        width: 312px !important;
+        height: 312px !important
+        }
+    .mobilefluid {
+        width: 100% !important
+        }
+    .ResizeSER {
+        width: 180px !important;
+        height: auto !important
+        }
+    /*Founders Grotesk*/
+    .FGSale {
+        font-size: 80px !important;
+        letter-spacing: -2px !important;
+        line-height: 80px !important
+        }
+    .FGDisplayOne {
+        font-size: 64px !important;
+        letter-spacing: -1.4px !important;
+        line-height: 64px !important
+        }
+    .FGDisplayTwo {
+        font-size: 52px !important;
+        letter-spacing: -1px !important;
+        line-height: 52px !important
+        }
+    .FGDisplayThree {
+        font-size: 44px !important;
+        letter-spacing: -0.8px !important;
+        line-height: 44px !important
+        }
+    .FGDisplayFour {
+        font-size: 36px !important;
+        letter-spacing: -0.7px !important;
+        line-height: 36px !important
+        }
+    .FGDisplayFive {
+        font-size: 28px !important;
+        letter-spacing: -0.6px !important;
+        line-height: 28px !important
+        }
+    .FGDisplaySix {
+        font-size: 24px !important;
+        letter-spacing: -0.5px !important;
+        line-height: 24px !important
+        }
+    .FGParagraph {
+        font-size: 16px !important;
+        letter-spacing: -0.32px !important;
+        line-height: 21px !important
+        }
+    .FGParagraphLG {
+        font-size: 20px !important;
+        letter-spacing: -0.4px !important;
+        line-height: 26px !important
+        }
+    /*Copernicus*/
+    .CDisplayOne {
+        font-size: 64px !important;
+        letter-spacing: -3.2px !important;
+        line-height: 77px !important
+        }
+    .CDisplayTwo {
+        font-size: 48px !important;
+        letter-spacing: -2.4px !important;
+        line-height: 58px !important
+        }
+    .CDisplayThree {
+        font-size: 32px !important;
+        letter-spacing: -1.6px !important;
+        line-height: 38px !important
+        }
+    .CDisplayThreeeeee {
+        font-size: 22px !important;
+        letter-spacing: -1.6px !important;
+        line-height: 27px !important
+        }
+    .CDisplayFour {
+        font-size: 24px !important;
+        letter-spacing: -1.2px !important;
+        line-height: 29px !important
+        }
+    .CParagraphLG {
+        font-size: 20px !important;
+        letter-spacing: -0.4px !important;
+        line-height: 26px !important
+        }
+    .CParagraph {
+        font-size: 16px !important;
+        letter-spacing: -0.32px !important;
+        line-height: 21px !important
+        }
+    .CTitleOne {
+        font-size: 20px !important;
+        letter-spacing: -1px !important;
+        line-height: 24px !important
+        }
+    .CTitleFour {
+        font-size: 12px !important;
+        letter-spacing: -0.7px !important;
+        line-height: 17px !important
+        }
+    /*Montserrat*/
+    .ParagraphL {
+        font-size: 16px !important;
+        letter-spacing: -0.16px !important;
+        line-height: 24px !important
+        }
+    .ParagraphM {
+        font-size: 16px !important;
+        letter-spacing: -0.16px !important;
+        line-height: 24px !important
+        }
+    .ParagraphS {
+        font-size: 14px !important;
+        letter-spacing: -0.14px !important;
+        line-height: 21px !important
+        }
+    .ParagraphXS {
+        font-size: 14px !important;
+        letter-spacing: -0.14px !important;
+        line-height: 21px !important
+        }
+    .DisplaySale {
+        font-size: 80px !important;
+        letter-spacing: -0.8px !important;
+        line-height: 90px !important
+        }
+    .DisplayOne {
+        font-size: 40px !important;
+        letter-spacing: -0.4px !important;
+        line-height: 50px !important
+        }
+    .DisplayTwo {
+        font-size: 32px !important;
+        letter-spacing: -0.32px !important;
+        line-height: 40px !important
+        }
+    .DisplayThree {
+        font-size: 28px !important;
+        letter-spacing: -0.28px !important;
+        line-height: 35px !important
+        }
+    .DisplayFour {
+        font-size: 24px !important;
+        letter-spacing: -0.24px !important;
+        line-height: 30px !important
+        }
+    .DisplayFive {
+        font-size: 20px !important;
+        letter-spacing: -0.2px !important;
+        line-height: 25px !important
+        }
+    .TitleOne {
+        font-size: 16px !important;
+        letter-spacing: -0.16px !important;
+        line-height: 20px !important
+        }
+    .TitleTwo {
+        font-size: 14px !important;
+        letter-spacing: -0.14px !important;
+        line-height: 17.5px !important
+        }
+    .TitleThree {
+        font-size: 12px !important;
+        letter-spacing: -0.12px !important;
+        line-height: 15px !important
+        }
+    .TitleFour {
+        font-size: 12px !important;
+        letter-spacing: -0.12px !important;
+        line-height: 15px !important
+        }
+    .TitleFive {
+        font-size: 12px !important;
+        letter-spacing: -0.12px !important;
+        line-height: 15px !important
+        }
+    /*Padding Classes*/
+    .noPad {
+        padding: 0 0 0 0 !important
+        }
+    .noLRPad {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+        }
+    .LRPadSM {
+        padding-left: 8px !important;
+        padding-right: 8px !important
+        }
+    .LRPadMD {
+        padding-left: 16px !important;
+        padding-right: 16px !important
+        }
+    .LRPadLG {
+        padding-left: 24px !important;
+        padding-right: 24px !important
+        }
+    .LRPadXL {
+        padding-left: 32px !important;
+        padding-right: 32px !important
+        }
+    .LRPadXXL {
+        padding-left: 40px !important;
+        padding-right: 40px !important
+        }
+    .BPadXS {
+        padding-bottom: 8px !important
+        }
+    .BPadSM {
+        padding-bottom: 16px !important
+        }
+    .BPadMD {
+        padding-bottom: 24px !important
+        }
+    .BPadXL {
+        padding-bottom: 40px !important
+        }
+    .PadSER {
+        padding-right: 66px !important;
+        padding-left: 66px !important
+        }
+    }
+a {
+    text-decoration: none
+    }</style></head>
+<body style="width: 100%; margin-right: auto; margin-left: auto; margin: 0px; -webkit-text-size-adjust: none; -ms-text-size-adjust: 100%; margin: 0; padding: 0; width: 100%; -webkit-text-size-adjust: 100%; background-color:#F5F5F5;"><img src="https://trk.emea.patagonia.com/wf/open?upn=u001.05bvpZnKZL-2Bacz6P8pH7SgpcmLVkrDN4FkPOxWvuO3OSLCyImDFSEZO1biPy0uv1bG0H6lQK-2FleJbcW1kL8EmQibnKGm3AcLIkhO7mBnPgpbw44Ac7lz9zJYoUSVQA244Zf0pI5PkO0-2FaSACwAurvLjTUDNTv78yxfdp-2F7bo2zhm4hWh8IFHlLfET87f7kgP9yI-2BgGthMYnDg9iMNSc2NStNqDHSa1y64jDzd11myJqZzwz2DcXnF4zKMb9-2Fr0IJLZHmUil7Kl8VCuKUGRuvh6Dftr4W-2FnxfWwOj-2FlAqXkqjmgH02NZ0m6YkFLrZpsJGzrKh0gNvLCsaQcdS1zYLVncALydxNq3vncILaTZ74l3mqFX47ZSJ0s9VjVyXSmgLkbcdjxytNVdcNSt10qYdBRolwhIEBrONBRkGQHxDAlXaX5cizWreUFOA9kSW9mVVppC2LeqR-2BazZgslL6MaBva-2FRrhjJvl8kQuVc42zNJBBwd2yO5SJfg2BIjAAkWm3Hu7yeOTF48Qtae2riPh7aV0rHdYa4pAqFiE3795uXuoiznFiCHZ4qC-2BfK9p-2BgrtMvmFQZiOd8Nmj4KvzufpdAiX64hHohhQnvRsN6LhQQSItfhw4aWmTS9oTfHwHfA200" alt="" width="1" height="1" border="0" style="height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;"/> <span rel="stylesheet" href="https://images.patagonia.com/eMedia/css/fonts.css?utm_source=Klaviyo_MF&amp;utm_medium=flow&amp;utm_campaign=Welcome_Flow&amp;utm_content=Welcome_Email_2_INT&amp;_kx=gspX6xmI8usCX5gvCZf7BPGl7r8KksoxzfIp5IxH3TQpYdfetauBfVTard1Aqb1X.ResBLx"></span>
+<!--Created with true tender-loving-care for patagonia email channel by HSR-->
+<div lang="en">
+<!--PREHEADER-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto; border-collapse:collapse;border-collapse:collapse;border-collapse:collapse; width:100%;">
+<tbody><tr>
+<td class="hide" style=" font-size:11px; line-height:13px; color:#f4f8fa; text-align:center; padding:0px 0px 0px 0px; width:100%; vertical-align:top;"> <!--PH copy goes here-->
+<div style="display: none; max-height: 0px; overflow: hidden;">
+              Plus, see how we are reducing our impact.
+            </div>
+<!-- Insert &zwnj;&nbsp; hack after hidden preview text -->
+<div style="display: none; max-height: 0px; overflow: hidden;">
+              ‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;‌‌&nbsp;
+            </div>
+</td>
+</tr>
+</tbody></table>
+<!--End PREHEADER-->
+<!--HERO SWAP MODULE-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; margin:0 auto; width:600px;">
+<tbody>
+<tr>
+<!--DESKTOP-->
+<td class="hide" style="margin:0 auto; padding:0px 0px 0px 0px; vertical-align:top; background-color:#FFFFFF;"> <a href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlBN52JhHz5gGc5CyAq9d83xK5lOcq39NL3moXiOiKyOOsbs3w-2FxgX7yzjSGdb3I1J8KeMthgf-2FFZCpGMY3Mc5p5lOuTn4-2BtYRM-2BbQVl88Fg0xAltDYLilK-2BOx0RnwmaMMfAJxLEqT53Tn8b1sw0KOm0M-2BJ66EdO152DMHgVhPH3lXfCfxCM0Dnh-2BKseVf9UQZpw6xA9E1JL79rLF1ZKYdnbmpYsuC7komZvaG034PSA7R0kz9ifyfUeF6LYO9atG-2BU-3Dz-B2_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYD-2F6pS-2BwRCAn-2Bv60Eir05RlO5NgPP1kR0VETnCBdkIj71GfDLWzmeKgKOU1Szq9tr5NPmV7oZw0gHahxBifiTMPp1-2Fb2iG16rFTWvd-2FJdqb8Tvl91XBX9ehJMU5zkXZsBLN-2B-2F-2F5-2BPrn3Z4Vzz0U0Tt7Y1nr-2BcDE7dyaoKJ81-2B78iw-3D">
+<img alt="Smiling man in colorful Patagonia jacket sitting outside a repair shop." border="0" class="fluid" src="https://images-eu.patagonia.com/EMEA_Welcome_Series_Email2_Hero_Image.jpg" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; color: #333333; font-size: 14px; width:100%; display:block;" width="600"></a>
+</td>
+<!--END DESKTOP-->
+</tr>
+</tbody>
+</table>
+<!--[if !mso]><!-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; margin:0 auto; width:600px; mso-hide: all;">
+<tbody>
+<tr>
+<!--MOBILE-->
+<td class="block" style="margin:0 auto; padding:0px 0px 0px 0px; display: none; background-color:#FFFFFF;" valign="top"> <a href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlBN52JhHz5gGc5CyAq9d83xK5lOcq39NL3moXiOiKyOOsbs3w-2FxgX7yzjSGdb3I1J8KeMthgf-2FFZCpGMY3Mc5p5lOuTn4-2BtYRM-2BbQVl88Fg0xAltDYLilK-2BOx0RnwmaMMfAJxLEqT53Tn8b1sw0KOm0M-2BJ66EdO152DMHgVhPH3lXfCfxCM0Dnh-2BKseVf9UQZpw6xA9E1JL79rLF1ZKYdnbmpYsuC7komZvaG034PSA7R0kz9ifyfUeF6LYO9atG-2BU-3DvgVG_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYD0RT7rOSpp9aSjajk1vNQpk23r-2ByCybDXJK4I65Eax6nnjQUB-2BuWlC9D4-2BRT0hdmZ7HsAL4XeRPgsZG2D81NRysu118wnJAGl-2BXoXYbyKUO7E8E3L5rh1X8ij4sAQEKh905Nk2xe7YLsU4A0901T-2BlZ8Ixr7oQwfp3dSITorszy4-3D">
+<img alt="Smiling man in colorful Patagonia jacket sitting outside a repair shop." border="0" class="fluid" src="https://images-eu.patagonia.com/EMEA_Welcome_Series_Email2_Hero_Image.jpg" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; color: #0F2322; font-size: 14px; width:100%;" width="320"></a>
+</td>
+<!--END MOBILE-->
+</tr>
+</tbody>
+</table>
+<!--<![endif]-->
+<!--END HERO SWAP MODULE-->
+<!--HERO SOLO MODULE-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#ffffff; margin:0 auto; width:600px;">
+<tbody><tr> <!--DISPLAY-->
+</tr>
+<tr>
+<td class="msoBold DisplayThree" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-weight: 700; letter-spacing:-0.48px; line-height: 54px; padding:40px 0px 0px 0px; color:#111111; text-align: center;font-size: 58px;">
+            Built for years,
+            <br> not&nbsp;seasons.
+          </td>
+</tr>
+<!--END DISPLAY-->
+</tbody></table>
+<!--END HERO SOLO MODULE-->
+<!--COPY SECTION-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#ffffff; margin:0 auto; width:600px;text-align:center;">
+<tbody><tr>
+<td> <!--Inset Container-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="inset" role="presentation" style="margin:0 auto; border-collapse:collapse; width: 512px;"> <!--Paragraph-L-->
+<tbody><tr>
+<td class="msoBold HParagraphL LRPadMD" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; color:#111111; font-size:20px; letter-spacing: -0.2px;  line-height:28px; padding: 24px 48px 40px; font-weight: 500; margin:0 auto; text-align:center;" valign="top">
+                  Quality products are simple, multifunctional, and socially and environmentally responsible. They also last a long time. And the longer they’re around, the more stories they’ll see, creating deeper connections between a product and its owner. But crucially, durable things mean we don’t need to make as many of them—using fewer resources, creating less waste, and causing less harm to the&nbsp;planet.
+                </td>
+</tr>
+<!--END Paragraph-L-->
+</tbody></table>
+<!--END Inset Container-->
+</td>
+</tr>
+</tbody></table>
+<!--END COPY SECTION-->
+<!--STACKED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#ffffff; margin:0 auto; width:600px;text-align:center;">
+<!--CTA 1 -->
+<tbody><tr>
+<td style="margin:0 auto; padding:0px 0px 70px 0px;" valign="middle">
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto; border-radius: 29px; width: 200px;">
+<tbody>
+<tr>
+<td class="MSOAvenirBold" style="margin:0 auto; font-family: 'RidgewayEmail', Helvetica, sans-serif;  font-size:16px; letter-spacing: -0.16px; line-height:20px; text-align:center; color:#FFFFFF; background-color:#000000; padding:14px 15px 14px 15px; font-weight: 700; border-radius:29px;" valign="middle"> <a style="text-decoration:none; color:#ffffff;" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlDT1du17x8Bmi5-2BSh1Bhz7Kfn8n5Ihgo8gRGbU0yaKQBgsSr77RyradhUCpjHBD653UbhvHYlcj9DV4p4A-2FYk0YFGoHreF99P9CpXb8XNMUTf6RQYi3BpYNSGdBqsfeEfeO8ODfqib5yrVIS9na6O5fKIkdLUDDImVtVLc83BhyaQpuWEyBToyOJ7nD8tu7R4EqJXPm-2Flue7BF03xfgiauzVUZ3borgX7wSoezKwLVG-2B631CGIGgLOku1PkbWlidOA-3Dh4S8_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDf3OzHkNBGHeNs5dHycuik5JLAdBcQJh-2BFOSS16PJF1NbK3paVbcrLRO1fs3v9vjFboZZDDjjZke57O60R9LPsXL09639SC66kCCRRFNfb2EBAM1o38Ckc4BsyYeD3q9Ex97-2FhSoYMHaKouQJvUgxo39Zf0DcUTl4Wbye7WG0MRI-3D">
+                        Learn More
+                    </a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!--END CTA 1-->
+</tbody></table>
+<!--END OUTLINED FIXED-WIDTH CTA-->
+<!--END Inset Container-->
+<!--END STACKED FIXED-WIDTH CTA-->
+<!--HERO SOLO MODULE-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#FFFFFF; margin:0 auto; width:600px;">
+<tbody><tr> <!--HERO Image-->
+<td style="margin:0 auto; padding:0px 0px 0px 0px; vertical-align:top;"> <a href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlCkxG0jbTcONkSxnB8fkjgcfNDAAzdvToz1JVA6QEaN4eoPnWhH06YhDL-2Bao8Htjz5xfJsiqIJL2LvF1EcmPbDWG261EK5j-2Fo07QbR7CZtn428GwM9zAX3v0-2Fpiz04DP017ssdt9fnl19vhV-2BmCFkahte3DmP-2F1skmWZs8nO6P-2F8TPNc6m-2BvOTsrCA5-2FC1OufmT1jqzLbC8s1fTTY8Ko6Jx8ugMrL7CFepNpd2j9XY3wlE4JyDQu35L9SnBMrAi4o-2Fz13-2B6iX6Pvl1LB4j6EXAoc68h_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDjrr4SVgVNd0H-2BgJ3L6s92XiMjA3nhPc3kUXdeYv53IZC3ET43wNRcg-2FKf2-2BmI7ew7Ct7iE6p4xPhk8KXOOiXpLNPwwcqHrVeF8n-2FX4yY7-2BzEAOqWeMyP-2FJ0QTRVYhqJZxN22lk-2FzgL8W9yL0oMXdG4DEjk5dn1iFi7QCQHtg-2BD4-3D">
+<img alt="A woman in a green uniform cutting fabric in a textile factory." border="0" class="fluid" src="https://images-eu.patagonia.com/EMEA_Welcome_Series_Email2_Secondary_Image.jpg" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; color: #333333; font-size: 14px; width:100%; display:block;" width="600"></a>
+</td>
+<!--HERO Image-->
+</tr>
+</tbody></table>
+<!--END HERO SOLO MODULE-->
+<!--HERO SOLO MODULE-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#ffffff; margin:0 auto; width:600px;">
+<tbody><tr> <!--DISPLAY-->
+</tr>
+<tr>
+<td class="msoBold DisplayThree" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-weight: 700; letter-spacing: -0.48px; line-height: 44px; padding:40px 0px 0px 0px; color:#111111; text-align: center;font-size: 48px;">
+            Reducing Our Impact
+          </td>
+</tr>
+<!--END DISPLAY-->
+</tbody></table>
+<!--END HERO SOLO MODULE-->
+<!--COPY SECTION-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#ffffff; margin:0 auto; width:600px;text-align:center;">
+<tbody><tr>
+<td> <!--Inset Container-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="inset" role="presentation" style="margin:0 auto; border-collapse:collapse; width: 512px;"> <!--Paragraph-L-->
+<tbody><tr>
+<td class="msoBold HParagraphL LRPadMD" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; color:#111111; font-size:20px; letter-spacing: -0.2px;  line-height:28px; padding: 24px 48px 40px; font-weight: 500; margin:0 auto; text-align:center;" valign="top">
+                  Our goal is to reduce the adverse social and environmental impacts of our products and to make sure they are produced under safe, fair, legal, and humane working conditions throughout the supply&nbsp;chain.
+                </td>
+</tr>
+<!--END Paragraph-L-->
+</tbody></table>
+<!--END Inset Container-->
+</td>
+</tr>
+</tbody></table>
+<!--END COPY SECTION-->
+<!--STACKED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#ffffff; margin:0 auto; width:600px;text-align:center;">
+<tbody><tr>
+<td style="margin:0 auto; padding:0px 0px 20px 0px;" valign="middle"> <!--OUTLINED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto; border-radius: 29px;" width="180">
+<tbody><tr>
+<td class="msoBold" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-size:16px; letter-spacing: -0.16px; line-height:16px; text-align:center; padding:10px 20px 10px 20px; font-weight: 700; border-radius:29px; border: 4px solid #000000;" valign="middle"> <a style="text-decoration:none; color:#000000;" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlCkxG0jbTcONkSxnB8fkjgcfNDAAzdvToz1JVA6QEaN4eoPnWhH06YhDL-2Bao8Htjz5xfJsiqIJL2LvF1EcmPbDWG261EK5j-2Fo07QbR7CZtn428GwM9zAX3v0-2Fpiz04DP017ssdt9fnl19vhV-2BmCFkahte3DmP-2F1skmWZs8nO6P-2F8TPNc6m-2BvOTsrCA5-2FC1OufmT1jqzLbC8s1fTTY8Ko6Jx8ugMrL7CFepNpd2j9XY3wlE4JyDQu35L9SnBMrAi4o-2Fz13-2B6iX6Pvl1LB4j6EXAoN2gn_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDAUSJ8mQZicQJMdXuebRe4JA1eCZLmm9SWIA60iT6A0qXIfu4lE6RX1RYLK6G2GIE8lhLzKhA3DhPvUXmvV1mqRnVonYKZFjCwDPj82ZLGFAgpFVaiZ7UDIW7AtMs-2BaghfcXoCfN9kpGxqx9gNPE6fmvQKROBppLag1chXy0-2FziU-3D">
+                    Learn More
+                </a>
+</td>
+</tr>
+</tbody></table>
+<!--END OUTLINED FIXED-WIDTH CTA-->
+</td>
+</tr>
+<tr>
+<td style="margin:0 auto; padding:0px 0px 20px 0px;" valign="middle"> <!--OUTLINED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto; border-radius: 29px;" width="180">
+<tbody><tr>
+<td class="msoBold" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-size:16px; letter-spacing: -0.16px; line-height:16px; text-align:center; padding:10px 20px 10px 20px; font-weight: 700; border-radius:29px; border: 4px solid #000000;" valign="middle"> <a style="text-decoration:none; color:#000000;" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlCkxG0jbTcONkSxnB8fkjgcdpXLeWOOijdYjRHsI45j-2B5q9-2BmMN2S6rWi9LDINmamhz6Ft-2FmptPwIroWa8w5B-2FijWec-2F8EDAVPd5F2uxG5yHMzlqJh0Q8zZ-2BcgRbcw6K8IgwtLzrQwYpJPOlTqRFnf-2FtFtNFwFIjm5ZRy-2FjNGm-2BmPDLIGeqJ9uo2b9I8oJLwFK-2BXNGtjvPU3oxTF9KAl8PUo3I5USuj-2F6aDFJmeQ6H3x3Im9DSWcloFWXOY-2BQ9kG2rpxYRWfd6VeJ6T6XfAgzJJYyz-2BjT6Xx55OB9cUcDAsZA-3D-3DXMPk_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDqGoofccZl9v3jxe-2FUfEs5ul-2BCgHooJw-2FusaHGq8oTOW52tdwf8-2BKnBumZ1cwkhHKf0sU-2BD5vpdCTPlAdyZ41Y4mNTWPL4KTqxyIvBhhPF0iJ6fne9LXhCdi5WOUbeh15KP0S-2BjojsxzWai4-2F2RXaQ-2FkSo-2F41lcb93SVLAI-2BBSrw-3D">
+                      Shop FairTrade
+                  </a>
+</td>
+</tr>
+</tbody></table>
+<!--END OUTLINED FIXED-WIDTH CTA-->
+</td>
+</tr>
+<tr>
+<td style="margin:0 auto; padding:0px 0px 50px 0px;" valign="middle"> <!--OUTLINED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto; border-radius: 29px;" width="180">
+<tbody><tr>
+<td class="msoBold" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-size:16px; letter-spacing: -0.16px; line-height:16px; text-align:center; padding:10px 20px 10px 20px; font-weight: 700; border-radius:29px; border: 4px solid #000000;" valign="middle"> <a style="text-decoration:none; color:#000000;" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlCRCLd5sd9iOjEvlKhPiPQIjla1K-2B-2BNOMDKHSdW7SOg3YaI1cK-2F-2Fa1gW0DND39VXMa59UlA4v3P5UjqT5u-2FzH4AUYGvFEDXuDNkFG4xlh-2FCiz1KEXNS3nlDMFfjJQiJn-2BcRNAM7-2BsU3JrC-2BAoJD99-2BRBn54uC8FcjH9WXunVeo5AijEcwtYUbQlPWv6v9v7h2YgR2LJOn-2Bkz9NANQD-2FXGl8NWTCIDjz2q6sGUUzJVVhi90Rw0egUXj0Z4BCeRh07sYVFZuBIG5VhMH-2BPZDPcs7TV0dV_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDvRIQzyHAEWVgYXIslHcm4EAMa8g-2FF9Tt6rIa5IBIHGo-2FQJUcaU8Wrxt7fpQWlNsxbpX8xa4g5Wz1jKLw-2F-2BG0KxhDOJvFDOYOJLIwsV5RDKpQ9puH1eHjUlAWHnEgc-2BWeDYkZJd4d7ED7VthtS-2F5B5Xhl19TBBtFW9l2cGpPRK5A-3D">
+                      Shop Recycled
+                  </a>
+</td>
+</tr>
+</tbody></table>
+<!--END OUTLINED FIXED-WIDTH CTA-->
+</td>
+</tr>
+</tbody></table>
+<!--END Inset Container-->
+<!--END STACKED FIXED-WIDTH CTA-->
+<!--HERO SOLO MODULE-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#f5f0e0; margin:0 auto; width:600px;">
+<tbody><tr> <!--HERO Image-->
+<td style="margin:0 auto; padding:20px 0px 0px 0px; vertical-align:top;"> <a href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlCSXpn4k859js1w1WSKTKZOyZGLWfZMsHgVIUso-2B-2B1TMvaBdYVx3gkIUjmP8JzNDB8PDQOHnZqWLVR2ly-2BkTgSTc5IKjEejEcmT7iKEhtxGzzdbG0-2BUPJK97YZ2Pg3SzlQdJoZG4-2F8g83o8QJySMDg37LmnwYJwf0-2Fy9wFXGbKCWFin2q9-2BcZG8jePx6moLJ94fR5yLME-2BI37IHXpJekvkmwCDNY8T6FwUawMAUe-2B6Ny6vJBSEGaiHf0RFoUpoMaRtHMiz1WTtS42KsBGk-2ByTjNtpQ-_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDc1wQ0XID-2Fe0VAAWOF-2BKN8rn8X-2BLGJCTAW6ZzHUofnw9IXdQMvtiPQx3lKeFjlFytzD3boIL7AcIJJQUCP-2Fk9YIcesl6EYv8QufAy3PCO52P-2B3XbxaA8EmNjwKCNpZkZWK5FRo8KOIFo7EGM8tBdkzpzXbQ0DisAXxujTiUONIOM-3D">
+<img alt="We guarantee everything we make." border="0" class="fluid" src="https://images-eu.patagonia.com/PAT_F24_EMEA_Welcome_Email_2_Ironclad_Desktop_Icon.png" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; color: #333333; font-size: 14px; width:100%; display:block;" width="600"></a>
+</td>
+<!--HERO Image-->
+</tr>
+</tbody></table>
+<!--END HERO SOLO MODULE-->
+<!--COPY SECTION-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#f5f0e0; margin:0 auto; width:600px;text-align:center;">
+<tbody><tr>
+<td>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="inset" role="presentation" style="margin:0 auto; border-collapse:collapse; width: 512px;"> <!--TITLE-->
+<tbody><tr>
+<td class="msoBold DisplayThree" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-weight: 700; letter-spacing: -0.48px; line-height: 54px; padding:20px 0px 0px 0px; color:#111111; text-align: center;font-size: 48px;">
+                  We guarantee
+                  <br> everything we&nbsp;make.
+                </td>
+</tr>
+<!--END TITLE-->
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td> <!--Inset Container-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="inset" role="presentation" style="margin:0 auto; border-collapse:collapse; width: 512px;"> <!--Paragraph-L-->
+<tbody><tr>
+<td class="msoBold HParagraphL LRPadMD" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; color:#111111; font-size:20px; letter-spacing: -0.2px;  line-height:28px; padding: 24px 48px 40px; font-weight: 500; margin:0 auto; text-align:center;" valign="top">
+                  If you’re not satisfied with one of our products, you can return it to us for a repair, replacement or refund. Every purchase is backed by our Ironclad&nbsp;Guarantee.
+                </td>
+</tr>
+<!--END Paragraph-L-->
+</tbody></table>
+<!--END Inset Container-->
+</td>
+</tr>
+</tbody></table>
+<!--END COPY SECTION-->
+<!--FLUID CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#f5f0e0; margin:0 auto; width:600px;text-align:center;">
+<tbody><tr>
+<td> <!--Inset Container-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="inset" role="presentation" style="margin:0 auto; border-collapse:collapse; width: 512px;">
+<tbody><tr>
+<td style="margin:0 auto; padding:0px 0px 40px 0px;" valign="middle"> <!--STACKED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#f5f0e0; margin:0 auto; width:600px;text-align:center;">
+<tbody><tr>
+<td style="margin:0 auto; padding:0px 0px 20px 0px;" valign="middle"> <!--OUTLINED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto; border-radius: 29px;" width="180">
+<tbody><tr>
+<td class="msoBold" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-size:16px; letter-spacing: -0.16px; line-height:16px; text-align:center; padding:10px 20px 10px 20px; font-weight: 700; border-radius:29px; border: 4px solid #000000;" valign="middle"> <a style="text-decoration:none; color:#000000;" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlCSXpn4k859js1w1WSKTKZOyZGLWfZMsHgVIUso-2B-2B1TMvaBdYVx3gkIUjmP8JzNDB8PDQOHnZqWLVR2ly-2BkTgSTc5IKjEejEcmT7iKEhtxGzzdbG0-2BUPJK97YZ2Pg3SzlQdJoZG4-2F8g83o8QJySMDg37LmnwYJwf0-2Fy9wFXGbKCWFin2q9-2BcZG8jePx6moLJ94fR5yLME-2BI37IHXpJekvkmwCDNY8T6FwUawMAUe-2B6Ny6vJBSEGaiHf0RFoUpoMaRtHMiz1WTtS42KsBGk-2ByTjNCBVc_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDju6gogf95wYJ3tC-2B8fiJkMlp9uavsnZ4jeykHPTtfVPDH5zGopBUIOn-2FWnQldHn8gG8FN6TAT1UoAwDU0RqsO9MT5DK4UZzNlyMYgYDXLvNslrmMaA30J1tMYYFJtMXWncCVMptVxI0-2FMO-2BLSaWHig7Lf2ZKixMJMrwub3cOpWo-3D">
+                                Ironclad
+                            </a>
+</td>
+</tr>
+</tbody></table>
+<!--END OUTLINED FIXED-WIDTH CTA-->
+</td>
+</tr>
+</tbody></table>
+<!--END Inset Container-->
+<!--END STACKED FIXED-WIDTH CTA-->
+</td>
+</tr>
+</tbody></table>
+<!--END Inset Container-->
+</td>
+</tr>
+</tbody></table>
+<!--END FLUID CTA-->
+<!--HERO SOLO MODULE-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#603c19; margin:0 auto; width:600px;">
+<tbody><tr> <!--HERO Image-->
+<td style="margin:0 auto; padding:0px 0px 0px 0px; vertical-align:top;"> <a href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlAMtImvpiVYhtzhthGUyKINKpDgmu7ugOHN9duC6Rj07l-2B7v-2BSJk5-2FYtAZcprK9Fcc1moQQByEWDNh8s2B9UZ28BGPN5co-2B9USHR7gbsj0jvyWm29g9mUot-2BeQ34SVpWFwRxQlvXYwET7A1Q8-2FhzZ0UUAy2fAd2HzURrNMoR5UK3HuH-2FrhvR-2BJHVSNwoJ2uH3ZNegrDvU4jypIpjgobI3ZeC0Tczn03QI-2Fi8A2eDPz4hAtesTiLhcGvOVb3mnjwVJQ-3DsEjJ_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDxH3gTqxCa2VojDhyNFZEl5k-2Frmq0gluEGwrpzqEKQ8wvQ5JOH2XBzC4-2F3WiWerNzBnCbwSoBAEy0LdXs-2BhkmDDV0RdCuFWtr82swo-2FuztAQYJeh3gmtvzPcx3Qcb4ysPqd1YcYCdrGQ3oKh7vXyiKm-2BRIpJVm2-2BhvxJVp0Y4Ef0-3D">
+<img alt="Patagonia Worn Wear logo" border="0" class="fluid" src="https://images-eu.patagonia.com/WornWear_Rider_Desktop_Icon.png" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; color: #333333; font-size: 14px; width:100%; display:block;" width="600"></a>
+</td>
+<!--HERO Image-->
+</tr>
+</tbody></table>
+<!--END HERO SOLO MODULE-->
+<!--COPY SECTION-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#603c19; margin:0 auto; width:600px;text-align:center;">
+<tbody><tr>
+<td>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="inset" role="presentation" style="margin:0 auto; border-collapse:collapse; width: 512px;"> <!--TITLE-->
+<tbody><tr>
+<td class="msoBold DisplayThree" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-weight: 700; letter-spacing: -0.48px; line-height: 44px; padding:20px 0px 0px 0px; color:#f6d2a4; text-align: center;font-size: 44px;">
+                  If it’s broke, fix&nbsp;it
+                </td>
+</tr>
+<!--END TITLE-->
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td> <!--Inset Container-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="inset" role="presentation" style="margin:0 auto; border-collapse:collapse; width: 512px;"> <!--Paragraph-L-->
+<tbody><tr>
+<td class="msoBold HParagraphL LRPadMD" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; color:#f6d2a4; font-size:20px; letter-spacing: normal; line-height:28px; padding: 24px 48px 40px; font-weight: 500; margin:0 auto; text-align:center;" valign="top">
+                  One of the most responsible things we can do for the planet is to keep our gear going longer. That’s why we’re making it as easy as possible to repair your&nbsp;gear.
+                </td>
+</tr>
+<!--END Paragraph-L-->
+</tbody></table>
+<!--END Inset Container-->
+</td>
+</tr>
+</tbody></table>
+<!--END COPY SECTION-->
+<!--FLUID CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#603c19; margin:0 auto; width:600px;text-align:center;">
+<tbody><tr>
+<td> <!--Inset Container-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="inset" role="presentation" style="margin:0 auto; border-collapse:collapse; width: 512px;">
+<tbody><tr>
+<td style="margin:0 auto; padding:40px 0px 60px 0px;" valign="middle"> <!--STACKED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#603c19; margin:0 auto; width:600px;text-align:center;">
+<tbody><tr>
+<td style="margin:0 auto; padding:0px 0px 20px 0px;" valign="middle"> <!--OUTLINED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto; border-radius: 29px;" width="230">
+<tbody><tr>
+<td class="msoBold" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-size:16px; letter-spacing: -0.16px; line-height:16px; text-align:center; padding:10px 20px 10px 20px; font-weight: 700; border-radius:29px; border: 4px solid #f6d2a4;" valign="middle"> <a style="text-decoration:none; color:#f6d2a4;" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlAMtImvpiVYhtzhthGUyKINKpDgmu7ugOHN9duC6Rj07l-2B7v-2BSJk5-2FYtAZcprK9Fcc1moQQByEWDNh8s2B9UZ28BGPN5co-2B9USHR7gbsj0jvyWm29g9mUot-2BeQ34SVpWFwRxQlvXYwET7A1Q8-2FhzZ0UUAy2fAd2HzURrNMoR5UK3HuH-2FrhvR-2BJHVSNwoJ2uH3ZNegrDvU4jypIpjgobI3ZeC0Tczn03QI-2Fi8A2eDPz4hAtesTiLhcGvOVb3mnjwVJQ-3DwpfP_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDJQm6f6lCi7N5fexkHcEer7UBvLScmz5JE4dM2qU6d-2BCdVF9cRMbu-2FJsgzvWMKDGpf4m7KlzBI9bxbu-2FtnhIJZM07L6MKY4WIVvW5I2xpJkBr3f9LDkMw7Y-2BLT4mcap8LLVMebxG-2BqgvfFOXBgjnOu3f01m5M3jyL2cr-2Bad5-2Bsuo-3D">
+                                        Discover Worn&nbsp;Wear
+                                    </a>
+</td>
+</tr>
+</tbody></table>
+<!--END OUTLINED FIXED-WIDTH CTA-->
+</td>
+</tr>
+<tr>
+<td style="margin:0 auto; padding:0px 0px 20px 0px;" valign="middle"> <!--OUTLINED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto; border-radius: 29px;" width="230">
+<tbody><tr>
+<td class="msoBold" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-size:16px; letter-spacing: -0.16px; line-height:16px; text-align:center; padding:10px 20px 10px 20px; font-weight: 700; border-radius:29px; border: 4px solid #f6d2a4;" valign="middle"> <a style="text-decoration:none; color:#f6d2a4;" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlD-2Blr0Xuq7SNyXQZ6HAAIA7vl9z-2BuT0WWgycVHzR2qKErYP0bJb1WTm-2BDDIdLRbW6Yi0dNgr3qtOnbnhpXI2BP8KO7G1UbHIo7OCy4i3v7KVVaH-2BSulYxtxIiTvzrmecBiT81oIaTKvvcYMgUAP2HHBipkWTR-2BII-2BTr-2FEmYIUcBUwGCJcloGvWDDVJdWPPIFBB5vRsjkrkkP-2BwU-2BoRySJcFAmQ4Me-2B3pwKwb5iOHlyzKM-2FDu9VEWvFAX76pkJqMSQo-3Dq99M_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDiYznzJIhSGkghnAIQEaP4sXQjJR9TribgpZRTunb9-2BTOhXuERALM2IwUN3ToTv1sStctEBAX01h0ihSBw3KAqIpCgo2rrQjr0QZSUH86ZCusCtpkxzxTkijl7Ep7eBUymKa2tbwxK3vcJOAtewyZgo-2FsR-2BKEctCIDRhjBuRTgdM-3D">
+                                       Care &amp; Repair
+                                    </a>
+</td>
+</tr>
+</tbody></table>
+<!--END OUTLINED FIXED-WIDTH CTA-->
+</td>
+</tr>
+<tr>
+<td style="margin:0 auto; padding:0px 0px 20px 0px;" valign="middle"> <!--OUTLINED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto; border-radius: 29px;" width="230">
+<tbody><tr>
+<td class="msoBold" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-size:16px; letter-spacing: -0.16px; line-height:16px; text-align:center; padding:10px 20px 10px 20px; font-weight: 700; border-radius:29px; border: 4px solid #f6d2a4;" valign="middle"> <a style="text-decoration:none; color:#f6d2a4;" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlAMtImvpiVYhtzhthGUyKINGhgufCeyx3pIYw1zbNXcm8WfaQuclzW-2Bi2J42f79J02JNK-2F7V2c-2B8GvU9dlnhE1GcuZsU0wPLUjQl4pX81fhFjmlxTgr-2FIE8-2B6pQgsw4q8nHAzobXdRg5-2FopRMa0hYsQGSbXdmtUxeE08iWoHpu0beCtvsHxt0Oe55OCyM66lrCFxADtSxcxG-2BiEXlDpXPjHXufXN8kejlVKzTLbeoyAgDyCDO2PgV8N-2BK0oKQr51LKRnz5KZYD9dK9MzaJiTfKDnWTk_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYD5Bk79TjA94sJ21K6nfZpkqhCTjWPyfLo6DiNVaIM0WMFVabUlVtOfUzeT7LQ0zOJ4sHE-2BwdBTa6tQBA4C3eNh0n9k0HNANgRz9FTWzrVzBWwOaKZWrtT4AOIX5LyYsCg-2BL8vvzNKcwryQWqEjjjEcqFBDS76VIJ-2Bq-2F1E1ke6pNk-3D">
+                                        Events
+                                    </a>
+</td>
+</tr>
+</tbody></table>
+<!--END OUTLINED FIXED-WIDTH CTA-->
+</td>
+</tr>
+<tr>
+<td style="margin:0 auto; padding:0px 0px 20px 0px;" valign="middle"> <!--OUTLINED FIXED-WIDTH CTA-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto; border-radius: 29px;" width="230">
+<tbody><tr>
+<td class="msoBold" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-size:16px; letter-spacing: -0.16px; line-height:16px; text-align:center; padding:10px 20px 10px 20px; font-weight: 700; border-radius:29px; border: 4px solid #f6d2a4;" valign="middle"> <a style="text-decoration:none; color:#f6d2a4;" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlA0W4DPXPRv-2B1qnFV9Kg9iAh1kPPdL5T2WE-2F44tDmWaS5iZCUmxxaTzMW4vJ8RXyHBVAwtm9s17T2h69pXi-2BJKhW1gzbXw-2BrwgftFqLIUaB0T2qqqcVHdzdZyrpKel5jSdHELJ9WzW7qmXEkbfomRWNU4IURnTTfa2VdXQDNvDUBlPHnu-2FZpl4kfrQFwfJqlpgVjxi6GdqDz6hnDavhXdyVqrFTgwrDKz-2BwbCwmbqBGV-2F5RMio1hC5csXVUj9qbyo-2B-2BxLDEcTznlK5-2F-2FpwH-2BrPi5DGh_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDw-2F0NVIjnaM5cC9YMrRlLwbPGvzd1EEjeLWjNFxgUcT80bjAiV55EoR0F-2BM1jIWfW5FoSiuBqKGtf4hC7IddKfB3ovFqcSko2b5nQRHwpNfo3u476d5dT8-2BylR5N24lnvooy0YA9Av94bOvGrZ4DPCxO4-2BUcLujpougVXZ-2FFWPys-3D">
+                                       Worn Wear&nbsp;Stories
+                                    </a>
+</td>
+</tr>
+</tbody></table>
+<!--END OUTLINED FIXED-WIDTH CTA-->
+</td>
+</tr>
+</tbody></table>
+<!--END Inset Container-->
+<!--END STACKED FIXED-WIDTH CTA-->
+</td>
+</tr>
+</tbody></table>
+<!--END Inset Container-->
+</td>
+</tr>
+</tbody></table>
+<!--END FLUID CTA-->
+<!--CAPTION-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#FFFFFF; margin:0 auto; width:600px; text-align:center;">
+<tbody><tr>
+<td>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="inset" role="presentation" style="margin:0 auto; border-collapse:collapse; width: 512px;">
+<tbody><tr>
+<td class="msoNormal LRPadMD" style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-size: 12px; letter-spacing: -0.12px; line-height: 18px; font-weight:400; padding:32px 24px 48px; color:#999999; text-align:center;">
+                  Photos: (Top) TOM BERGMAN (Middle) HASHIM BADANI
+                </td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--END CAPTION-->
+<!--PATAGONIA OWNERSHIP ANNOUNCEMENT-->
+<!--HERO SWAP MODULE-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#FFFFFF; margin:0 auto; width:600px; text-align:center;">
+<tbody>
+<tr>
+<td>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse: collapse; margin: 0 auto; max-width: 600px; background-color: #FFFFFE">
+<tbody>
+<tr> <!-- DESKTOP -->
+<td class="hide" style="padding: 30px 0px 30px 0px; vertical-align: top; background-color: #FFFFFF; text-align: center;"> <a href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlDkpdQq3ItYwNVFXp4b0EoMMCpYKt-2FE2CvXJB2SP164zWNwi97ljqyqJj4QxpM8aV4Uq1jlQwZ-2BgD1qTjjFQQ3UdeZEAGNDUAvev7cgk8LGk9TcTVtU-2BiYOpzkPZqOK6UnmAK-2FxA1U464XL8RPJEBEve1qoJnmgXnXUg8rD50m6duQxF6-2FfudidZX-2FGfqEi2-2BNiCxy87d9jfGajWOnpuKIWfjt4TuIQabzsN55DL1RspvbbQuDgTs3y9nClErLmTrU-3DeMAI_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDKV8RWLhuQZ9I2wHzZ0x7EdaREUrtUXoIo5YTg1Lqlw12KXZhcRlCgB02i4Ki1avdXUxSnVf2UQ6J6YpfTREyxwcAu6TltCj1NnsgVeDrzkvcM8G8V4j2MILO0BCkpQRhEunMERUumW-2FcqpQMFDkS6W15RzJlbpexHV8EwCHRzkk-3D">
+<img alt="Earth is now our only shareholder. Read Yvon's letter" border="0" class="fluid" src="https://images-eu.patagonia.com/Footer_EN_Keyline_150dpi.png" style="margin: 0 auto; text-align:center; width: 280px;" width="280">
+</a>
+</td>
+<!-- END DESKTOP -->
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if !mso]><!-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color:#FFFFFF; margin:0 auto; width:600px; text-align:center;">
+<tbody>
+<tr>
+<td>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; margin:0 auto; max-width:300px; mso-hide: all;background-color:#FFFFFF;">
+<tbody>
+<tr>
+<!--MOBILE-->
+<td class="block" style="margin:0 auto; padding:30px 0px 30px 0px; display: none; background-color:#FFFFFF;" valign="top">
+<a href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlDkpdQq3ItYwNVFXp4b0EoMMCpYKt-2FE2CvXJB2SP164zWNwi97ljqyqJj4QxpM8aV4Uq1jlQwZ-2BgD1qTjjFQQ3UdeZEAGNDUAvev7cgk8LGk9TcTVtU-2BiYOpzkPZqOK6UnmAK-2FxA1U464XL8RPJEBEve1qoJnmgXnXUg8rD50m6duQxF6-2FfudidZX-2FGfqEi2-2BNiCxy87d9jfGajWOnpuKIWfjt4TuIQabzsN55DL1RspvbbQuDgTs3y9nClErLmTrU-3DVfgG_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDserFlL8x5nfEWO7kJ9pFYDL6oAvI-2FuQ4hP08u6O-2BLCY4Z6V16CtdJNgoBntIbw6OxL9sJ9sM1oaFS2ls5wkUBWDeqoG-2F2ZBzYVYY2wqN3TrvL3e9HFXuX1BF6tXWgBQLXqTNpR8LplpYtCTQXFNFifNnTo-2F6WtoQ22EjCHLhLhQ-3D">
+<img alt="Earth is now our only shareholder. Read Yvon's letter" border="0" class="fluid" src="https://images-eu.patagonia.com/Footer_EN_Keyline_150dpi.png" style="margin:0 auto; text-align:center; width:300px;" width="300"></a>
+</td>
+<!--END MOBILE-->
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--<![endif]-->
+<!--END HERO SWAP MODULE-->
+<!--END PATAGONIA OWNERSHIP ANNOUNCEMENT-->
+<!-- START FOOTER -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="fluid" role="presentation" style="border-collapse:collapse; background-color: #FFFFFF; margin:0 auto; width:600px; text-align:center;">
+<!-- START CUSTOMER SERVICE -->
+<tbody>
+<tr>
+<td style="text-align: center;">
+<span style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-weight: bold; font-size: 12px; color: #999999;">Patagonia Customer Service</span>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+<span style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-weight: 400px; font-size: 12px; color: #999999;"><a style="text-decoration:none; color: #999999;" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlB4MHBUMWk9AE6-2BR2EqpU0eRdILS7ZJd39slTbcL7dfVal9CPNtuNrjEdefReeK7fluCQ5WQZ9nuQ-2BrrHGKCDHv7hMun8YS9wtHZP4XgHZIr1OFxNFGGfUI4-2BeKPiACJGmgqxqhZ3sBFoztq1lZAj-2FwwH-2FJfpR3Vb3yfYU-2F-2Bb0JohoCIg7RggQzF5yzvUR9wjwipNn7NPzRXzDGA2JujvdKp3mgv1u4aOoGaXugKIvJtBOQXPxkkIpPh-2FTOAohA-2FdJDCZ8oNE2WKnAS4vye-2BI75TEgP_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDAMLLjz9tTH48S-2BaGlfP-2BWd5NGTVHWEbpDFnVhXU2MRzHhIHK-2F0ZJWwedAYw9WRuJf4033X9fcQYJl8Ne8FtAmjXHcPJWaRCY7Chn6DsjHZWiDDJFKQ1xnlZOSpWPLPciv-2F0wWuNHhKKKpiEmcDc32elYxE-2BhBaE2i5-2F-2FGcJ8aho-3D">Jollemanhof 11, 1019 GW Amsterdam,</a></span>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+<span style="font-family: 'RidgewayEmail', Helvetica, sans-serif; font-weight: 400px; font-size: 12px; color: #999999;">
+    <a style="text-decoration:none; color: #999999;" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlB4MHBUMWk9AE6-2BR2EqpU0eRdILS7ZJd39slTbcL7dfVal9CPNtuNrjEdefReeK7fluCQ5WQZ9nuQ-2BrrHGKCDHv7hMun8YS9wtHZP4XgHZIr1OFxNFGGfUI4-2BeKPiACJGmgqxqhZ3sBFoztq1lZAj-2FwwH-2FJfpR3Vb3yfYU-2F-2Bb0JohoCIg7RggQzF5yzvUR9wjwipNn7NPzRXzDGA2JujvdKp3mgv1u4aOoGaXugKIvJtBOQXPxkkIpPh-2FTOAohA-2FdJDCZ8oNE2WKnAS4vye-2BI75PFRx_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDSUyf8d-2BZEFyKgH1Wh6d-2FxnMiASfudcmZw-2BSbYcbK3i2UWNGRhqQbb78LuyYDHE30ixAYsUITTX0JqLHIvkyCvRaefgUiywjj1-2FxSO5ZjoaoAdh54VxmuX4r7VT5S0xdRMexVVJAJSEjIGNgMi-2FGIYOjPNckrMMGoOWrBf7jnipU-3D">The Netherlands</a> |&nbsp;<a href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlB4MHBUMWk9AE6-2BR2EqpU0eRdILS7ZJd39slTbcL7dfVal9CPNtuNrjEdefReeK7fluCQ5WQZ9nuQ-2BrrHGKCDHv7hMun8YS9wtHZP4XgHZIr1OFxNFGGfUI4-2BeKPiACJGmgqxqhZ3sBFoztq1lZAj-2FwwH-2FJfpR3Vb3yfYU-2F-2Bb0JohoCIg7RggQzF5yzvUR9wjwipNn7NPzRXzDGA2JujvdKp3mgv1u4aOoGaXugKIvJtBOQXPxkkIpPh-2FTOAohA-2FdJDCZ8oNE2WKnAS4vye-2BI75Ozm1_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYD3rOg-2BmL4UBM3MCN1IQurANFhssFnevmtnDBmnF-2BBfeRhEyo-2FcU6eRzwG2Y-2FDUcRM-2Fd-2BoCohO-2BZrYC9-2F-2BaUKRQeB-2FnaBxq-2BifWAUYhXeA8ObLXRkI20gUlWN4L8incu4NMfuwDFCBu5Ozmrw9iDqvcve4wrx6epS8QBpgUoHGog0-3D">Contact Us</a>
+  </span>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+              &nbsp;
+            </td>
+</tr>
+<!-- END CUSTOMER SERVICE -->
+<!-- START EMAIL PREFERENCES -->
+<tr>
+<td style="text-align: center; font-family: 'RidgewayEmail', Helvetica, sans-serif; font-weight: bold; font-size: 12px; color: #999999;">
+              Email Preferences 
+            </td>
+</tr>
+<tr>
+<td style="text-align: center; font-family: 'RidgewayEmail', Helvetica, sans-serif; font-weight: 400px; font-size: 12px; color: #999999;">
+              Pick your interests so we can send you info that matters.
+            </td>
+</tr>
+<tr>
+<td style="text-align: center; font-family: 'RidgewayEmail', Helvetica, sans-serif; font-weight: 400px; font-size: 12px; color: #999999;">
+               <a class="manage-preferences" clicktracking="off" href="http://eu-preferences.patagonia.com/p/preference_center?a=ResBLx&c=01M48NJ7PTH6SVDQ6TYVTJN655&k=4feab201d16d1cd543e3bf414a6c840a&g=XaXLtE&se=streetwear_moto_8asc%40maxxspace.com&m=UdBKD4&r=01M4BFV2SNYYMNQ4KJSGDDNMJA&e=00000qzpe">Unsubscribe</a> | <a class="manage-preferences" clicktracking="off" href="http://eu-preferences.patagonia.com/p/preference_center?a=ResBLx&c=01M48NJ7PTH6SVDQ6TYVTJN655&k=4feab201d16d1cd543e3bf414a6c840a&g=XaXLtE&se=streetwear_moto_8asc%40maxxspace.com&m=UdBKD4&r=01M4BFV2SNYYMNQ4KJSGDDNMJA&e=00000qzpe">Update My Preferences</a> |
+              <a href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSBp9RKLlsTuyvguL3UD-2BBlDv5lmg1-2FlK92yc4uxpXeLwmQ3ogGhClVoY3-2F5zebbl-2FI4-2Bdt-2F9NHueeg4xkRVIDkYe56jhRq6q-2BGnrKrhs81hGGaV7ZTMgq9vSFIGUbEe8AW1BXY0buonBr-2BAhFe5i7AO-2B8Hds0x2X-2FVLNgc4xZMfMiGDh7kGbzPBM7f2lsEeNl4onkveIvortSMBVAoddsocay2pWySGXulrTqpYBIW77NZOMJPhY1LcAfxBlMa1gAWJEEQjdxRsdL7P2lPVTxYI7Rgkb7SYaG01YcJnZT5Ahot_2_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDFUahe2H0iVj6-2Bg-2B7hV5rN5oXdzy-2BmktTTwAgqP94L1PoauHcSF5AFLrbqK76xdMXESr2aiPqMHhQYY29bgj9TVXtWWMGoT-2BWhJoX4muKyKu-2FiJ8plmGwQtOlMrIBN8qZ3gJQproSd46agksarlhmZEgPSZRh0XPko9Zej0DiK3c-3D">Privacy Notice</a>
+            </td>
+</tr>
+<tr>
+<td style="text-align: center;">
+              &nbsp;
+            </td>
+</tr>
+<!-- END EMAIL PREFERENCES -->
+<!--RECIPIENT + VIEW ONE WEB-->
+<tr>
+<td style="text-align: center; font-family: 'RidgewayEmail', Helvetica, sans-serif; font-weight: 400px; font-size: 12px; color: #999999;">
+               This email was sent to streetwear_moto_8asc@maxxspace.com | <a class="web-view" href="https://trk.emea.patagonia.com/ls/click?upn=u001.gv-2FpfZrezTDLQpI4CsYJSPNdCglhZjtPtdFenc-2B9r8j1kqCQG7kgKc0IjxqTZNHeuGGVqg3o-2Fbaj-2F0gu62-2F0axrzf3SvuE211QGr5syXiXnkSx9LBImC-2F-2BfNGY7AtjGXnSJ8WB5VYsOxQ91iuT3QXc68jg0SA1qXXmBcLD3atF9kYTlk-2BLznun3-2BGQ3ZLUaJleo1jhv1UDGCcMY2xTmEUjsSEwp1j5q4IHJRyjtgoEpjh8SEO6CQqLvO8Lk0UdKPg1Rk-2Bii3MnzTQDX2diXoYOpihd5GVaO5uVBWMTRduE8RjVY1FCCtQCvidb3J-2FEyPm-Hg_S-2FBLWeBQacAIhd6sCPYph-2Blh6mRnDUEGTw-2FOlp9yaqqFaXYmR67lO6FPQE8hCSF-2Bb77KHf-2BhkJtLBhYwJx76EBd2SwTZ-2B9XnFTcJakDSbr-2BVrFixi6Q8tdO8vxSPnFdNe5nS2kv8fYdKydIOdtUaByvSGaLVvg7GK3gDi17i0-2FNYchbHnFUKuWTOsuYVV05oa1C3XKC13d6fEQee5eHnBfL7KmEZS1i6iWumy7VOVCVHryqRAyQO0LTwlxQEjjd0cDEwth8rYshH7f8EgW9HKtddglUQ0jZeUnucRYuhCAwd68D0aVWoCdDB-2FLwDXqTUCadh0K9wd5XYBfGf-2BJxZkajtmCpfplMmhf5NbRzz2WcybQKprvNVArC9g7SYoAS99MNws07ovi6HpB6hLl0Yg4VO4h4MOLeWur5KqfKQia32-2FnFVBEyBl9iZFUQPEJYDaWAS31MDGcGXx0o3JNU-2BXO5jB7cjb9OgYBp2CUbCVozMLFxg509cOZIuBLP0IjUMPixOyaAEg-2FUArsH90H8lXYsFVY-2FpXXjgdcrrDES-2BxqQFtU3Xxd6UuCXP2ONDoJZ4GB43bBp6gynKwWxBNKdFbFQ6DiCyIS9VhlG72hZjd6g-3D">View on web</a> | ©&nbsp;2026&nbsp;Patagonia,&nbsp;Inc.   
+  
+
+</td>
+</tr>
+<!--END RECIPIENT + VIEW ONE WEB-->
+</tbody>
+</table>
+<!-- END FOOTER -->
+</div>
+
+</body></html>
