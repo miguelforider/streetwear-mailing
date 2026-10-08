@@ -1,42 +1,29 @@
 [
   {
-    "id": "6ac7c9e8e0b629a3e7214334",
-    "brand": "palace",
-    "brand_name": "Palace",
+    "id": "6ac7d9759f1b1d6e64f9a8a3",
+    "brand": "loveobsessed",
+    "brand_name": "LOVEOBSESSED",
     "category": "Streetwear",
-    "subject": "Confirm Your Subscription",
-    "from_name": "Palace Skateboards",
-    "from_email": "info@palaceskateboards.com",
+    "subject": "Rookies II ¡Únete al early access! 🔒",
+    "from_name": "David & Carlos · LOVEOBSESSED®",
+    "from_email": "contact@loveobsessed.es",
     "to": "streetwear_moto_8asc@maxxspace.com",
-    "date": "2026-10-08 16:50:47",
-    "folder": "palace/2026-10-08_confirm-your-subscription",
-    "html_path": "palace/2026-10-08_confirm-your-subscription/email.html"
-  },
-  {
-    "id": "6ac7c9421088fd3b2421d500",
-    "brand": "john-doe",
-    "brand_name": "John Doe",
-    "category": "Directos moto",
-    "subject": "Confirm your email address to participate in the raffle",
-    "from_name": "",
-    "from_email": "news@ridejohndoe.eu",
-    "to": "streetwear_moto_8asc@maxxspace.com",
-    "date": "2026-10-08 16:48:01",
-    "folder": "john-doe/2026-10-08_confirm-your-email-address-to-participat",
-    "html_path": "john-doe/2026-10-08_confirm-your-email-address-to-participat/email.html"
+    "date": "2026-10-08 17:57:03",
+    "folder": "loveobsessed/2026-10-08_rookies-ii-únete-al-early-access",
+    "html_path": "loveobsessed/2026-10-08_rookies-ii-únete-al-early-access/email.html"
   },
   {
     "id": "6ac7c914a28788857d9de8cb",
-    "brand": "john-doe-onlineshop",
-    "brand_name": "John Doe Onlineshop",
-    "category": "Streetwear",
+    "brand": "john-doe",
+    "brand_name": "John Doe",
+    "category": "Directos moto",
     "subject": "Newsletter Anmeldung erfolgreich",
     "from_name": "John Doe Onlineshop",
     "from_email": "noreply@freeway24.com",
     "to": "streetwear_moto_8asc@maxxspace.com",
     "date": "2026-10-08 16:47:13",
-    "folder": "john-doe-onlineshop/2026-10-08_newsletter-anmeldung-erfolgreich",
-    "html_path": "john-doe-onlineshop/2026-10-08_newsletter-anmeldung-erfolgreich/email.html"
+    "folder": "john-doe/2026-10-08_newsletter-anmeldung-erfolgreich",
+    "html_path": "john-doe/2026-10-08_newsletter-anmeldung-erfolgreich/email.html"
   },
   {
     "id": "6ac7bacc1b2fe215d6493f20",
@@ -79,7 +66,7 @@
   },
   {
     "id": "6ac665c84ffd5ae790867747",
-    "brand": "patagonia-europe",
+    "brand": "patagonia",
     "subject": "We make quality gear for lifetimes of doing what you love",
     "from_name": "Patagonia Europe",
     "from_email": "funhogs@emea.patagonia.com",
@@ -105,7 +92,7 @@
   },
   {
     "id": "6ac4f6fd1088fd3b24186de8",
-    "brand": "patagonia-europe",
+    "brand": "patagonia",
     "subject": "A guide to Patagonia",
     "from_name": "Patagonia Europe",
     "from_email": "funhogs@emea.patagonia.com",

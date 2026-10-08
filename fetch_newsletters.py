@@ -9,6 +9,7 @@ import json
 import os
 import random
 import re
+import shutil
 import string
 import sys
 import urllib.error
@@ -29,53 +30,78 @@ BRAND_MAP = {
     "alpinestars": ("Alpinestars", "Directos moto"),
     "bull-it": ("Bull-it", "Directos moto"),
     "bullit": ("Bull-it", "Directos moto"),
+    "bull it": ("Bull-it", "Directos moto"),
     "dainese": ("Dainese", "Directos moto"),
     "deus": ("Deus Ex Machina", "Directos moto"),
     "deuscustoms": ("Deus Ex Machina", "Directos moto"),
+    "deus ex machina": ("Deus Ex Machina", "Directos moto"),
     "fuel": ("Fuel Motorcycles", "Directos moto"),
     "fuelmotorcycles": ("Fuel Motorcycles", "Directos moto"),
+    "fuel motorcycles": ("Fuel Motorcycles", "Directos moto"),
     "icon": ("Icon", "Directos moto"),
     "rideicon": ("Icon", "Directos moto"),
     "johndoe": ("John Doe", "Directos moto"),
+    "john doe": ("John Doe", "Directos moto"),
+    "john-doe": ("John Doe", "Directos moto"),
     "ridejohndoe": ("John Doe", "Directos moto"),
     "knox": ("Knox", "Directos moto"),
     "planet-knox": ("Knox", "Directos moto"),
+    "planet knox": ("Knox", "Directos moto"),
     "leftlane": ("Leftlane", "Directos moto"),
+    "left lane": ("Leftlane", "Directos moto"),
     "pando": ("Pando Moto", "Directos moto"),
     "pandomoto": ("Pando Moto", "Directos moto"),
+    "pando moto": ("Pando Moto", "Directos moto"),
     "pmj": ("PMJ", "Directos moto"),
+    "pmj jeans": ("PMJ", "Directos moto"),
     "resurgence": ("Resurgence Gear", "Directos moto"),
     "resurgencegear": ("Resurgence Gear", "Directos moto"),
+    "resurgence gear": ("Resurgence Gear", "Directos moto"),
     "revit": ("REV'IT!", "Directos moto"),
     "revitsport": ("REV'IT!", "Directos moto"),
+    "rev'it": ("REV'IT!", "Directos moto"),
     "ridingculture": ("Riding Culture", "Directos moto"),
+    "riding culture": ("Riding Culture", "Directos moto"),
     "saint": ("SA1NT", "Directos moto"),
+    "sa1nt": ("SA1NT", "Directos moto"),
     "spidi": ("Spidi", "Directos moto"),
     "tobacco": ("Tobacco Motorwear", "Directos moto"),
     "tobaccomotorwear": ("Tobacco Motorwear", "Directos moto"),
+    "tobacco motorwear": ("Tobacco Motorwear", "Directos moto"),
     "tucano": ("Tucano Urbano", "Directos moto"),
     "tucanourbano": ("Tucano Urbano", "Directos moto"),
+    "tucano urbano": ("Tucano Urbano", "Directos moto"),
     "wildust": ("Wildust", "Directos moto"),
+    "wildust sisters": ("Wildust", "Directos moto"),
 
     # Streetwear
     "aime": ("Aimé Leon Dore", "Streetwear"),
     "aimeleondore": ("Aimé Leon Dore", "Streetwear"),
+    "aime leon dore": ("Aimé Leon Dore", "Streetwear"),
     "ald": ("Aimé Leon Dore", "Streetwear"),
     "arte": ("Arte Antwerp", "Streetwear"),
     "arte-antwerp": ("Arte Antwerp", "Streetwear"),
+    "arte antwerp": ("Arte Antwerp", "Streetwear"),
     "carhartt": ("Carhartt WIP", "Streetwear"),
     "carhartt-wip": ("Carhartt WIP", "Streetwear"),
+    "carhartt wip": ("Carhartt WIP", "Streetwear"),
     "coldculture": ("Cold Culture", "Streetwear"),
+    "cold culture": ("Cold Culture", "Streetwear"),
     "coldcultureworldwide": ("Cold Culture", "Streetwear"),
     "colebuxton": ("Cole Buxton", "Streetwear"),
+    "cole buxton": ("Cole Buxton", "Streetwear"),
     "dailypaper": ("Daily Paper", "Streetwear"),
+    "daily paper": ("Daily Paper", "Streetwear"),
     "dailypaperclothing": ("Daily Paper", "Streetwear"),
     "eme": ("Eme Studios", "Streetwear"),
+    "eme studios": ("Eme Studios", "Streetwear"),
     "emestudios": ("Eme Studios", "Streetwear"),
     "fearofgod": ("Fear of God Essentials", "Streetwear"),
+    "fear of god": ("Fear of God Essentials", "Streetwear"),
     "essentials": ("Fear of God Essentials", "Streetwear"),
     "gods": ("GODS", "Streetwear"),
     "fakegods": ("GODS", "Streetwear"),
+    "fake gods": ("GODS", "Streetwear"),
     "fakegodsbrand": ("GODS", "Streetwear"),
     "kith": ("Kith", "Streetwear"),
     "laagam": ("Laagam", "Streetwear"),
@@ -83,16 +109,24 @@ BRAND_MAP = {
     "orggeïl": ("Orggeïl", "Streetwear"),
     "nude-project": ("Nude Project", "Streetwear"),
     "nudeproject": ("Nude Project", "Streetwear"),
+    "nude project": ("Nude Project", "Streetwear"),
     "loveobsessed": ("LOVEOBSESSED", "Streetwear"),
+    "love obsessed": ("LOVEOBSESSED", "Streetwear"),
     "ourlegacy": ("Our Legacy", "Streetwear"),
+    "our legacy": ("Our Legacy", "Streetwear"),
     "palace": ("Palace", "Streetwear"),
     "palaceskateboards": ("Palace", "Streetwear"),
+    "palace skateboards": ("Palace", "Streetwear"),
     "pangaia": ("Pangaia", "Streetwear"),
     "represent": ("Represent", "Streetwear"),
     "representclo": ("Represent", "Streetwear"),
+    "represent clo": ("Represent", "Streetwear"),
     "scrapworld": ("Scrap World", "Streetwear"),
+    "scrap world": ("Scrap World", "Streetwear"),
     "scuffers": ("Scuffers", "Streetwear"),
     "sportyandrich": ("Sporty & Rich", "Streetwear"),
+    "sporty & rich": ("Sporty & Rich", "Streetwear"),
+    "sporty and rich": ("Sporty & Rich", "Streetwear"),
     "stussy": ("Stüssy", "Streetwear"),
     "uniqlo": ("Uniqlo", "Streetwear"),
     "yuxus": ("Yuxus", "Streetwear"),
@@ -100,31 +134,44 @@ BRAND_MAP = {
     # Técnica
     "alo": ("Alo", "Técnica"),
     "aloyoga": ("Alo", "Técnica"),
+    "alo yoga": ("Alo", "Técnica"),
     "arcteryx": ("Arc'teryx", "Técnica"),
+    "arc'teryx": ("Arc'teryx", "Técnica"),
     "ciele": ("Ciele", "Técnica"),
     "cieleathletics": ("Ciele", "Técnica"),
+    "ciele athletics": ("Ciele", "Técnica"),
     "districtvision": ("District Vision", "Técnica"),
+    "district vision": ("District Vision", "Técnica"),
     "ecoalf": ("Ecoalf", "Técnica"),
     "gymshark": ("Gymshark", "Técnica"),
     "houdini": ("Houdini", "Técnica"),
     "houdinisportswear": ("Houdini", "Técnica"),
+    "houdini sportswear": ("Houdini", "Técnica"),
     "janji": ("Janji", "Técnica"),
     "nike": ("Nike ACG", "Técnica"),
     "nikeacg": ("Nike ACG", "Técnica"),
+    "nike acg": ("Nike ACG", "Técnica"),
     "acg": ("Nike ACG", "Técnica"),
     "norrona": ("Norrøna", "Técnica"),
+    "norrøna": ("Norrøna", "Técnica"),
     "on": ("On", "Técnica"),
     "on-running": ("On", "Técnica"),
+    "on running": ("On", "Técnica"),
     "pasnormalstudios": ("Pas Normal Studios", "Técnica"),
+    "pas normal studios": ("Pas Normal Studios", "Técnica"),
     "patagonia": ("Patagonia", "Técnica"),
     "patagonia-europe": ("Patagonia", "Técnica"),
+    "patagonia europe": ("Patagonia", "Técnica"),
     "rapha": ("Rapha", "Técnica"),
     "satisfy": ("Satisfy", "Técnica"),
     "satisfyrunning": ("Satisfy", "Técnica"),
+    "satisfy running": ("Satisfy", "Técnica"),
     "soar": ("SOAR", "Técnica"),
     "soarrunning": ("SOAR", "Técnica"),
+    "soar running": ("SOAR", "Técnica"),
     "vuori": ("Vuori", "Técnica"),
     "vuoriclothing": ("Vuori", "Técnica"),
+    "vuori clothing": ("Vuori", "Técnica"),
 }
 
 
@@ -191,17 +238,27 @@ def detect_brand_and_category(from_name, from_email, subject):
 
     # 1. Comprobar dominios directos
     for key, (canonical_name, category) in BRAND_MAP.items():
-        # Si la clave coincide con el dominio principal (ej: patagonia en emea.patagonia.com)
-        if f".{key}." in f".{domain}." or domain.startswith(f"{key}.") or domain == f"{key}.com":
+        clean_key = key.replace(" ", "").replace("-", "")
+        if f".{clean_key}." in f".{domain}." or domain.startswith(f"{clean_key}.") or domain == f"{clean_key}.com":
             return slugify(canonical_name), canonical_name, category
 
-    # 2. Búsqueda por palabra completa en el nombre del remitente o asunto
-    for key, (canonical_name, category) in BRAND_MAP.items():
+    # 2. Búsqueda por palabra o frase en el remitente o asunto (longitud descendente para mayor precisión)
+    sorted_keys = sorted(BRAND_MAP.keys(), key=len, reverse=True)
+    for key in sorted_keys:
+        canonical_name, category = BRAND_MAP[key]
         pattern = r"(?<![a-zA-Z0-9])" + re.escape(key) + r"(?![a-zA-Z0-9])"
         if re.search(pattern, from_name_lower) or re.search(pattern, subject_lower):
             return slugify(canonical_name), canonical_name, category
 
-    # 3. Heurística si no está en el mapa
+    # 3. Búsqueda por caracteres alfanuméricos comprimidos (ej: johndoe vs john doe)
+    condensed_from = re.sub(r"[^a-z0-9]", "", from_name_lower)
+    for key in sorted_keys:
+        clean_key = re.sub(r"[^a-z0-9]", "", key)
+        if clean_key and len(clean_key) >= 4 and clean_key in condensed_from:
+            canonical_name, category = BRAND_MAP[key]
+            return slugify(canonical_name), canonical_name, category
+
+    # 4. Heurística si no está en el mapa
     brand_slug = "general"
     brand_name = "General"
     category = "Streetwear"
@@ -221,6 +278,91 @@ def detect_brand_and_category(from_name, from_email, subject):
             brand_slug = slugify(main_part)
 
     return brand_slug, brand_name, category
+
+
+CONFIRMATION_PATTERNS = [
+    r"confirm.*(subscription|email|newsletter|address|registration)",
+    r"confirma.*(suscripci[oó]n|correo|email|cuenta|registro)",
+    r"verify.*(email|subscription|address|account)",
+    r"verifi.*(email|courriel|adresse|inscription)",
+    r"bitte.*bestätigen",
+    r"bestätigen sie.*(anmeldung|newsletter|e-mail)",
+    r"opt-?in",
+    r"activate.*(subscription|account|newsletter)",
+    r"action required.*(confirm|verify)",
+    r"one more step",
+    r"please confirm",
+    r"por favor confirma",
+]
+
+
+def is_confirmation_email(subject, from_name=""):
+    """Comprueba si un correo es de confirmación / doble opt-in transaccional."""
+    text_to_check = f"{subject or ''} {from_name or ''}".lower()
+    for pat in CONFIRMATION_PATTERNS:
+        if re.search(pat, text_to_check, re.IGNORECASE):
+            return True
+    return False
+
+
+def extract_and_click_confirmation_link(html_body, text_body=""):
+    """
+    Busca enlaces de confirmación o activación y los visita mediante HTTP GET
+    para asegurar que la suscripción queda confirmada en la marca.
+    """
+    urls_found = []
+
+    # 1. Buscar enlaces <a href="..."> en HTML
+    a_tags = re.findall(r'<a\s+[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', html_body or "", re.IGNORECASE | re.DOTALL)
+    for href, link_text in a_tags:
+        clean_text = re.sub(r'<[^>]+>', '', link_text).strip().lower()
+        href_lower = href.lower()
+
+        # Descartar enlaces irrelevantes o de baja
+        if any(bad in href_lower for bad in ["unsubscribe", "opt-out", "mailto:", "javascript:", "instagram.com", "facebook.com", "twitter.com", "tiktok.com", "youtube.com", "pinterest.com"]):
+            continue
+
+        # Comprobar si el texto o el link indica confirmación
+        is_confirm_text = any(word in clean_text for word in ["confirm", "confirma", "verify", "verificar", "bestätigen", "activate", "activar", "yes, subscribe", "sí, suscribirme", "yes, sign me up", "click here to confirm"])
+        is_confirm_url = any(word in href_lower for word in ["confirm", "verification", "optin", "double_opt_in", "/r/ldb/", "token=", "activate"])
+
+        if is_confirm_text or is_confirm_url:
+            urls_found.append(href)
+
+    # 2. Si no se encontró en <a>, buscar URLs directas en texto plano
+    if not urls_found and text_body:
+        raw_urls = re.findall(r'https?://[^\s<>"\']+', text_body)
+        for u in raw_urls:
+            u_lower = u.lower()
+            if any(word in u_lower for word in ["confirm", "verify", "optin", "activate", "token="]):
+                if not any(bad in u_lower for bad in ["unsubscribe", "privacy", "terms"]):
+                    urls_found.append(u)
+
+    # Visitar los enlaces de confirmación encontrados
+    visited = set()
+    clicked = False
+    for u in urls_found:
+        u_clean = u.replace("&amp;", "&").strip()
+        if u_clean in visited:
+            continue
+        visited.add(u_clean)
+        try:
+            req = urllib.request.Request(
+                u_clean,
+                headers={
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+                    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                    "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
+                }
+            )
+            with urllib.request.urlopen(req, timeout=12) as resp:
+                print(f"      [✓] Suscripción confirmada automáticamente: {resp.geturl()} (HTTP {resp.status})")
+                clicked = True
+                break
+        except Exception as e:
+            print(f"      [i] Enlace de confirmación visitado ({u_clean[:60]}...): {e}")
+
+    return clicked
 
 
 def get_token(email_addr, password):
@@ -322,6 +464,17 @@ def fetch_all():
 </head><body>{text_body}</body></html>"""
 
         brand_slug, brand_name, category = detect_brand_and_category(from_name, from_email, subject)
+
+        # Detectar si es un correo transaccional de confirmación / doble opt-in
+        text_body = detail.get("text", "")
+        if is_confirmation_email(subject, from_name):
+            print(f"  [⚡] Correo de confirmación detectado ({brand_name}): '{subject}'")
+            print("      Haciendo clic automático en el enlace de confirmación para activar la suscripción...")
+            extract_and_click_confirmation_link(html_body, text_body)
+            processed_ids.add(msg_id)
+            print("      [✓] Suscripción activada y correo excluido del Swipe File (no es newsletter de producto).")
+            continue
+
         subj_slug = slugify(subject, max_length=40)
         folder_name = f"{date_prefix}_{subj_slug}"
         target_dir = ARCHIVE_DIR / brand_slug / folder_name
@@ -353,12 +506,23 @@ def fetch_all():
         new_count += 1
         print(f"  [+] [{category} | {brand_name}] {subject} ({date_prefix})")
 
-    # Re-clasificar también los ya existentes en index_data si no tienen categoría
+    # Limpieza proactiva: eliminar cualquier correo de confirmación residual y re-clasificar
+    cleaned_index = []
     for item in index_data:
-        if "category" not in item:
-            _, b_name, cat = detect_brand_and_category(item.get("from_name", ""), item.get("from_email", ""), item.get("subject", ""))
+        if is_confirmation_email(item.get("subject", ""), item.get("from_name", "")):
+            folder = ARCHIVE_DIR / item.get("folder", "")
+            if folder.exists():
+                shutil.rmtree(folder, ignore_errors=True)
+            print(f"  [-] Eliminado correo de confirmación residual: {item.get('subject')}")
+        else:
+            b_slug, b_name, cat = detect_brand_and_category(
+                item.get("from_name", ""), item.get("from_email", ""), item.get("subject", "")
+            )
+            item["brand"] = b_slug
             item["brand_name"] = b_name
             item["category"] = cat
+            cleaned_index.append(item)
+    index_data = cleaned_index
 
     with open(PROCESSED_FILE, "w", encoding="utf-8") as f:
         json.dump(list(processed_ids), f, indent=2)

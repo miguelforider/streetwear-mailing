@@ -1,0 +1,13 @@
+{
+  "id": "6ac7c914a28788857d9de8cb",
+  "brand": "john-doe",
+  "brand_name": "John Doe",
+  "category": "Directos moto",
+  "subject": "Newsletter Anmeldung erfolgreich",
+  "from_name": "John Doe Onlineshop",
+  "from_email": "noreply@freeway24.com",
+  "to": "streetwear_moto_8asc@maxxspace.com",
+  "date": "2026-10-08 16:47:13",
+  "folder": "john-doe/2026-10-08_newsletter-anmeldung-erfolgreich",
+  "html_path": "john-doe/2026-10-08_newsletter-anmeldung-erfolgreich/email.html"
+}
