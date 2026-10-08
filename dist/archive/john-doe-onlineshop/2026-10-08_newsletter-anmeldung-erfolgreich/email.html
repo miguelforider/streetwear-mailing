@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--@subject Newsletter subscription success @--><html xmlns="http://www.w3.org/1999/xhtml" style="background-color: #FCFCFC;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+</head>
+<body style="font-family: 'Montserrat', sans-serif; font-weight: 300; margin: 0; padding: 0; text-align: left; color: #42474c; background-color: #FCFCFC; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background: #FCFCFC; font-size: 12px;">
+<style type="text/css">
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700);
+/* Font Styles */
+/* Media Queries */
+/* Setting the Web Font inside a media query so that Outlook doesn't try to render the web font */
+@media screen {
+  .email-heading h1,
+  .store-info h4,
+  th.cell-name,
+  a.product-name,
+  p.product-name,
+  .address-details h6,
+  .method-info h6,
+  h5.closing-text,
+  .action-button,
+  .action-button a,
+  .action-button span,
+  .action-content h1 {
+    font-family: 'Montserrat', sans-serif; !important;
+    font-weight: 300;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    width: 94% !important;
+    padding: 0 3% !important;
+    display: block !important;
+  }
+
+  .container-table {
+    width: 100% !important;
+    max-width: 600px;
+    min-width: 300px;
+  }
+  table.image-background{
+	  background-size: cover; 
+	  background-position: top center; 
+	  background-repeat: no-repeat;
+  }
+
+  td.store-info h4 {
+    margin-top: 8px !important;
+    margin-bottom: 0px !important;
+  }
+
+  td.store-info p {
+    margin: 5px 0 !important;
+  }
+
+  .wrapper {
+    width: 100% !important;
+    display: block;
+    padding: 5px 0 !important;
+  }
+
+  .cell-name,
+  .cell-content {
+    padding: 8px !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  td.two-column {
+	  float:left;
+	  width:100%;
+	  padding-left:50px !important;
+	  }
+  .email-heading,
+  .store-info {
+    float: left;
+    width: 98% !important;
+    display: block;
+    text-align: center;
+    padding: 10px 1% !important;
+    border-right: 0px !important;
+  }
+
+  .address-details, .method-info {
+    width: 85%;
+    display: block;
+  }
+
+  .store-info {
+    border-top: 1px dashed #eeeeee;
+  }
+
+  .method-info {
+    margin-bottom: 15px !important;
+  }
+}
+/* Remove link color on iOS */
+.no-link a {
+  color: #42474c !important;
+  cursor: default !important;
+  text-decoration: none !important;
+}
+
+.method-info h6,
+.address-details h6,
+.closing-text {
+  color: #dc2239 !important;
+}
+
+td.order-details h3,
+td.store-info h4 {
+  color: #42474c !important;
+}
+
+.method-info p,
+.method-info dl {
+  margin: 5px 0 !important;
+  font-size: 12px !important;
+}
+
+td.align-center {
+  text-align: center !important;
+}
+
+td.align-right {
+  text-align: right !important;
+}
+
+/* Newsletter styles */
+td.expander {
+  padding: 0 !important;
+}
+
+table.button td,
+table.social-button td {
+  width: 92% !important;
+}
+
+table.facebook:hover td {
+  background: #2d4473 !important;
+}
+
+table.twitter:hover td {
+  background: #0087bb !important;
+}
+
+table.google-plus:hover td {
+  background: #CC0000 !important;
+}
+
+/* ============================================ *
+ * Product Grid
+ * ============================================ */
+@media screen and (max-width: 600px) {
+  .products-grid tr td {
+    width: 50% !important;
+    display: block !important;
+    float: left !important;
+  }
+}
+.product-name a:hover {
+  color: #3399cc !important;
+  text-decoration: none !important;
+}
+
+
+</style>
+
+    
+<!-- Start Image Background -->
+<table class="image-background" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="22262b" background="http://met.ivycommerce.eu/glamoura_main_image.jpg" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; margin: 0; background-size: cover; background-position: top center; background-repeat: no-repeat;">
+    <tr>
+        <td class="image-background" align="center" style="background: url('http://met.ivycommerce.eu/pattern.png') 0 0 repeat; font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0;">
+            <table class="container-table" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; padding: 0; margin: 0 auto; width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">           
+                <tr>
+                    <td class="separator-50" height="50" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0; font-size: 50px; line-height: 50px;"> </td>
+                </tr>
+                
+                <!-- Start Three Column -->            
+                <tr>
+                    <td style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0;">
+                        <table class="container-table" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; padding: 0; margin: 0 auto; width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                            <tr>
+                                <td class="center" align="center" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0; text-align: center;">
+                                    <a href="https://www.ridejohndoe.com/es/" style="text-decoration: none; color: #dc2239;">
+                                        <img border="0" style="display: block; margin: 0 auto; -ms-interpolation-mode: bicubic;" src="http://www.ridejohndoe.com/skin/frontend/tv_nast_package/tv_nast2/images/logo_email.png" alt="John Doe Onlineshop">
+											       <!--
+												   
+                                            width="165"
+                                            
+
+
+                                           src="https://www.ridejohndoe.com/media/email/logo/default/logo_email.png"
+                                            
+                                            height="48"
+                                            -->
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Start Three Column -->
+                <tr>
+                    <td class="separator-30" height="30" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0; font-size: 30px; line-height: 30px;"> </td>
+                </tr>
+                <tr>
+                    <td align="center" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0;">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="60" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; margin: 0;">
+                            <tr>
+                                <td class="separator-line" bgcolor="#ffffff" height="1" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0; line-height: 0px; font-size: 0px; color: #FFF;"> </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="separator-30" height="30" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0; font-size: 30px; line-height: 30px;"> </td>
+                </tr>
+                <tr>
+                    <td class="colored-heading" align="center" height="28" style="font-family: 'Montserrat', sans-serif; font-weight: 500; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0; color: #dc2239; font-size: 16px; line-height: 28px; letter-spacing: 2px;">
+                        <div style="line-height: 28px;">THANK YOU</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="heading" align="center" height="28" style="font-family: 'Montserrat', sans-serif; font-weight: 600; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0; color: #ffffff; font-size: 22px; mso-line-height-rule: exactly; line-height: 28px; letter-spacing: 4px;">
+                        <div style="line-height: 28px;">for shopping with John Doe Onlineshop</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="separator-10" height="10" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0; font-size: 10px; line-height: 10px;"> </td>
+                </tr> 
+
+                
+                <tr>
+                    <td class="separator-50" height="50" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0; font-size: 50px; line-height: 50px;"> </td>
+                </tr>
+                <tr>
+                    <td align="center" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0;">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; margin: 0;">
+                            <tr>
+                                <td class="button" align="center" valign="middle" height="38" width="140" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: middle; padding: 0; margin: 0; border: 1px solid #ffffff;">
+                                    <a href="http://www.ridejohndoe.com" style="text-decoration: none; color: #FFF; font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 14px; line-height: 38px;">SHOP NOW</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="separator-50" height="50" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0; font-size: 50px; line-height: 50px;"> </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- End Image Background -->
+    
+<!-- Begin wrapper table -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" id="background-table" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; margin: 0 auto; background-color: #FCFCFC; font-size: 14px;">
+    <tr>
+        <td valign="top" class="container-td" align="center" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 0; margin: 0; width: 100%;">
+            <table cellpadding="0" cellspacing="0" border="0" align="center" class="container-table" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; margin: 0 auto; width: 600px;">
+                <tr>
+                    <td valign="top" class="top-content" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 5px; margin: 0; background: #FCFCFC;">
+                    <!-- Begin Content -->
+
+
+<table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; margin: 0; width: 100%;">
+    <tr>
+        <td class="action-content" style="font-family: 'Montserrat', sans-serif; font-weight: 300; border-collapse: collapse; vertical-align: top; padding: 10px 20px 15px; margin: 0; line-height: 18px;">
+            <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 300; color: #000;">Newsletter Anmeldung erfolgreich</h4>
+        </td>
+    </tr>
+</table>
+
+
+                    <!-- End Content -->
+                    </td>
+                </tr>
+            </table>
+            <h5 class="closing-text" style="font-family: 'Montserrat', sans-serif; font-weight: normal; color: #000; text-align: center; font-size: 22px; line-height: 32px; margin-bottom: 75px; margin-top: 30px;">Thank you, John Doe Onlineshop!</h5>
+        </td>
+    </tr>
+</table>
+<!-- End wrapper table -->
+</body>
+
+</html>

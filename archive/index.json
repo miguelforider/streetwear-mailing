@@ -1,5 +1,31 @@
 [
   {
+    "id": "6ac7c9421088fd3b2421d500",
+    "brand": "john-doe",
+    "brand_name": "John Doe",
+    "category": "Directos moto",
+    "subject": "Confirm your email address to participate in the raffle",
+    "from_name": "",
+    "from_email": "news@ridejohndoe.eu",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-08 16:48:01",
+    "folder": "john-doe/2026-10-08_confirm-your-email-address-to-participat",
+    "html_path": "john-doe/2026-10-08_confirm-your-email-address-to-participat/email.html"
+  },
+  {
+    "id": "6ac7c914a28788857d9de8cb",
+    "brand": "john-doe-onlineshop",
+    "brand_name": "John Doe Onlineshop",
+    "category": "Streetwear",
+    "subject": "Newsletter Anmeldung erfolgreich",
+    "from_name": "John Doe Onlineshop",
+    "from_email": "noreply@freeway24.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-08 16:47:13",
+    "folder": "john-doe-onlineshop/2026-10-08_newsletter-anmeldung-erfolgreich",
+    "html_path": "john-doe-onlineshop/2026-10-08_newsletter-anmeldung-erfolgreich/email.html"
+  },
+  {
     "id": "6ac7bacc1b2fe215d6493f20",
     "brand": "patagonia",
     "brand_name": "Patagonia",
