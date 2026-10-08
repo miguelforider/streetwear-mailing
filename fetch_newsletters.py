@@ -79,6 +79,8 @@ BRAND_MAP = {
     "fakegodsbrand": ("GODS", "Streetwear"),
     "kith": ("Kith", "Streetwear"),
     "laagam": ("Laagam", "Streetwear"),
+    "orggeil": ("Orggeïl", "Streetwear"),
+    "orggeïl": ("Orggeïl", "Streetwear"),
     "nude-project": ("Nude Project", "Streetwear"),
     "nudeproject": ("Nude Project", "Streetwear"),
     "loveobsessed": ("LOVEOBSESSED", "Streetwear"),

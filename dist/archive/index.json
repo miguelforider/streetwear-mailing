@@ -1,5 +1,18 @@
 [
   {
+    "id": "6ac7c9e8e0b629a3e7214334",
+    "brand": "palace",
+    "brand_name": "Palace",
+    "category": "Streetwear",
+    "subject": "Confirm Your Subscription",
+    "from_name": "Palace Skateboards",
+    "from_email": "info@palaceskateboards.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-08 16:50:47",
+    "folder": "palace/2026-10-08_confirm-your-subscription",
+    "html_path": "palace/2026-10-08_confirm-your-subscription/email.html"
+  },
+  {
     "id": "6ac7c9421088fd3b2421d500",
     "brand": "john-doe",
     "brand_name": "John Doe",

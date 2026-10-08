@@ -47,6 +47,7 @@ Tu correo para registrarte:
 | **Kith** | kith.com | [Visitar web](https://kith.com) |
 | **Laagam** | laagam.com | [Visitar web](https://laagam.com) |
 | **Nude Project** *(Suscrito ✅)* | nude-project.com | [Visitar web](https://nude-project.com) |
+| **Orggeïl** *(Tramitado ⚡)* | orggeil.com | [Visitar web](https://orggeil.com) |
 | **Our Legacy** | ourlegacy.com | [Visitar web](https://www.ourlegacy.com) |
 | **Palace** | palaceskateboards.com | [Visitar web](https://www.palaceskateboards.com) |
 | **Pangaia** | pangaia.com | [Visitar web](https://pangaia.com) |
