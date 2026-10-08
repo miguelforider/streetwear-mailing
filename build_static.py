@@ -70,6 +70,10 @@ def generate_static():
         '<span style="font-size:0.75rem; color:var(--text-muted); background:var(--border); padding:4px 8px; border-radius:4px;">Archivo Estático</span>'
     )
 
+    # Crear .nojekyll para que GitHub Pages sirva todos los archivos sin Jekyll
+    (DIST_DIR / ".nojekyll").touch()
+    (BASE_DIR / ".nojekyll").touch()
+
     # Guardar dist/index.html y también en la raíz del repositorio
     out_index = DIST_DIR / "index.html"
     root_index = BASE_DIR / "index.html"
