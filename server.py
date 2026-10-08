@@ -509,12 +509,12 @@ HTML_PAGE = """<!DOCTYPE html>
       document.getElementById('emptyState').style.display = 'none';
       const frame = document.getElementById('emailFrame');
       frame.style.display = 'block';
-      frame.src = `/archive/${e.html_path}`;
+      frame.src = `archive/${e.html_path}`;
       
       document.getElementById('previewHeader').style.display = 'flex';
       document.getElementById('previewSubject').textContent = e.subject || '(Sin asunto)';
       document.getElementById('previewDetails').textContent = `De: ${e.from_name} <${e.from_email}> • Categoría: ${e.category || 'Streetwear'} • ${e.date}`;
-      document.getElementById('btnOpenFull').href = `/archive/${e.html_path}`;
+      document.getElementById('btnOpenFull').href = `archive/${e.html_path}`;
     }
 
     function setViewMode(mode) {

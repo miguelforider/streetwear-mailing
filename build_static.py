@@ -70,12 +70,15 @@ def generate_static():
         '<span style="font-size:0.75rem; color:var(--text-muted); background:var(--border); padding:4px 8px; border-radius:4px;">Archivo Estático</span>'
     )
 
-    # Guardar dist/index.html
+    # Guardar dist/index.html y también en la raíz del repositorio
     out_index = DIST_DIR / "index.html"
+    root_index = BASE_DIR / "index.html"
     with open(out_index, "w", encoding="utf-8") as f:
         f.write(modified_html)
+    with open(root_index, "w", encoding="utf-8") as f:
+        f.write(modified_html)
 
-    print(f"[✓] Generado 'dist/index.html' con {len(emails_data)} correos embebidos.")
+    print(f"[✓] Generado 'index.html' en la raíz y en 'dist/' con {len(emails_data)} correos embebidos.")
 
     # 5. Generar también un archivo ZIP listo para enviar
     zip_path = BASE_DIR / "streetwear_swipe_file"
