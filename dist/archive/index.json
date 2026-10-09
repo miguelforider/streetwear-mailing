@@ -1,5 +1,44 @@
 [
   {
+    "id": "6ac8dafd2d4121ee247da5b4",
+    "brand": "scuffers",
+    "brand_name": "Scuffers",
+    "category": "Streetwear",
+    "subject": "New colors in",
+    "from_name": "Scuffers®",
+    "from_email": "help@scuffers.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-09 12:15:54",
+    "folder": "scuffers/2026-10-09_new-colors-in",
+    "html_path": "scuffers/2026-10-09_new-colors-in/email.html"
+  },
+  {
+    "id": "6ac8ca23da1e4598d2e8ef04",
+    "brand": "patagonia",
+    "brand_name": "Patagonia",
+    "category": "Técnica",
+    "subject": "Connecting with your sport communities",
+    "from_name": "Patagonia Europe",
+    "from_email": "funhogs@emea.patagonia.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-09 11:04:02",
+    "folder": "patagonia/2026-10-09_connecting-with-your-sport-communities",
+    "html_path": "patagonia/2026-10-09_connecting-with-your-sport-communities/email.html"
+  },
+  {
+    "id": "6ac8b4a17f6d7f1b9b159e10",
+    "brand": "patagonia",
+    "brand_name": "Patagonia",
+    "category": "Técnica",
+    "subject": "Get the emails you truly want",
+    "from_name": "Patagonia Europe",
+    "from_email": "funhogs@emea.patagonia.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-09 09:32:15",
+    "folder": "patagonia/2026-10-09_get-the-emails-you-truly-want",
+    "html_path": "patagonia/2026-10-09_get-the-emails-you-truly-want/email.html"
+  },
+  {
     "id": "6ac7d9759f1b1d6e64f9a8a3",
     "brand": "loveobsessed",
     "brand_name": "LOVEOBSESSED",
