@@ -1,5 +1,31 @@
 [
   {
+    "id": "6aca372f5b605813d239c051",
+    "brand": "patagonia",
+    "brand_name": "Patagonia",
+    "category": "Técnica",
+    "subject": "Casual jackets for mixed weather",
+    "from_name": "Patagonia Europe",
+    "from_email": "funhogs@emea.patagonia.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-10 13:01:33",
+    "folder": "patagonia/2026-10-10_casual-jackets-for-mixed-weather",
+    "html_path": "patagonia/2026-10-10_casual-jackets-for-mixed-weather/email.html"
+  },
+  {
+    "id": "6aca1d0e975e537ed20670b8",
+    "brand": "nude-project",
+    "brand_name": "Nude Project",
+    "category": "Streetwear",
+    "subject": "My face reveal",
+    "from_name": "Nude Project",
+    "from_email": "info@nude-project.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-10 11:10:04",
+    "folder": "nude-project/2026-10-10_my-face-reveal",
+    "html_path": "nude-project/2026-10-10_my-face-reveal/email.html"
+  },
+  {
     "id": "6ac8dafd2d4121ee247da5b4",
     "brand": "scuffers",
     "brand_name": "Scuffers",
