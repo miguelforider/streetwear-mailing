@@ -1,5 +1,31 @@
 [
   {
+    "id": "6acb5fef2d4121ee2484b589",
+    "brand": "scuffers",
+    "brand_name": "Scuffers",
+    "category": "Streetwear",
+    "subject": "Last one — use your 10% 🌟",
+    "from_name": "Scuffers®",
+    "from_email": "fam@scuffers.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-11 10:07:40",
+    "folder": "scuffers/2026-10-11_last-one-use-your-10",
+    "html_path": "scuffers/2026-10-11_last-one-use-your-10/email.html"
+  },
+  {
+    "id": "6acb5f8c3bac5996540b5be7",
+    "brand": "scuffers",
+    "brand_name": "Scuffers",
+    "category": "Streetwear",
+    "subject": "STILL DECIDING? Your 10% is inside 👀",
+    "from_name": "Scuffers®",
+    "from_email": "fam@scuffers.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-11 10:06:00",
+    "folder": "scuffers/2026-10-11_still-deciding-your-10-is-inside",
+    "html_path": "scuffers/2026-10-11_still-deciding-your-10-is-inside/email.html"
+  },
+  {
     "id": "6aca372f5b605813d239c051",
     "brand": "patagonia",
     "brand_name": "Patagonia",
