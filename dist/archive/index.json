@@ -1,5 +1,18 @@
 [
   {
+    "id": "6ad372156b23a7d922f74284",
+    "brand": "patagonia",
+    "brand_name": "Patagonia",
+    "category": "Técnica",
+    "subject": "New for Fall",
+    "from_name": "Patagonia Europe",
+    "from_email": "funhogs@emea.patagonia.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-17 13:03:15",
+    "folder": "patagonia/2026-10-17_new-for-fall",
+    "html_path": "patagonia/2026-10-17_new-for-fall/email.html"
+  },
+  {
     "id": "6ad123275b605813d2500250",
     "brand": "loveobsessed",
     "brand_name": "LOVEOBSESSED",
