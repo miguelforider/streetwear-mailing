@@ -1,5 +1,18 @@
 [
   {
+    "id": "6ad64d5707e858b989143216",
+    "brand": "nude-project",
+    "brand_name": "Nude Project",
+    "category": "Streetwear",
+    "subject": "meet our friend Clément",
+    "from_name": "Nude Project",
+    "from_email": "info@nude-project.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-19 17:03:18",
+    "folder": "nude-project/2026-10-19_meet-our-friend-clément",
+    "html_path": "nude-project/2026-10-19_meet-our-friend-clément/email.html"
+  },
+  {
     "id": "6ad4f4579f1b1d6e64222724",
     "brand": "scuffers",
     "brand_name": "Scuffers",
