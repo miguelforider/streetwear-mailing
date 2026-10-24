@@ -1,5 +1,18 @@
 [
   {
+    "id": "6adcad3c71f37a0c963a3197",
+    "brand": "patagonia",
+    "brand_name": "Patagonia",
+    "category": "Técnica",
+    "subject": "Ready for anything",
+    "from_name": "Patagonia Europe",
+    "from_email": "funhogs@emea.patagonia.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-24 13:06:03",
+    "folder": "patagonia/2026-10-24_ready-for-anything",
+    "html_path": "patagonia/2026-10-24_ready-for-anything/email.html"
+  },
+  {
     "id": "6ada4e76b41ed0033ad9ba7b",
     "brand": "loveobsessed",
     "brand_name": "LOVEOBSESSED",
