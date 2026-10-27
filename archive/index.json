@@ -1,5 +1,57 @@
 [
   {
+    "id": "6ae102fa45422461c01fe381",
+    "brand": "scuffers",
+    "brand_name": "Scuffers",
+    "category": "Streetwear",
+    "subject": "NEW IN | FW26, Drop 6",
+    "from_name": "Scuffers®",
+    "from_email": "help@scuffers.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-27 20:00:56",
+    "folder": "scuffers/2026-10-27_new-in-fw26-drop-6",
+    "html_path": "scuffers/2026-10-27_new-in-fw26-drop-6/email.html"
+  },
+  {
+    "id": "6ae0f50872eb1ae58797144c",
+    "brand": "orggeïl",
+    "brand_name": "Orggeïl",
+    "category": "Streetwear",
+    "subject": "🚨 24 HOURS LEFT - FW26 🚨",
+    "from_name": "[ORGGEÏL]",
+    "from_email": "management@orggeil.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-27 19:01:23",
+    "folder": "orggeïl/2026-10-27_24-hours-left-fw26",
+    "html_path": "orggeïl/2026-10-27_24-hours-left-fw26/email.html"
+  },
+  {
+    "id": "6ae0f4084f5a36e165742f4a",
+    "brand": "loveobsessed",
+    "brand_name": "LOVEOBSESSED",
+    "category": "Streetwear",
+    "subject": "Hay algo que llevamos tiempo preparando… 👀",
+    "from_name": "David & Carlos · LOVEOBSESSED®",
+    "from_email": "contact@loveobsessed.es",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-27 18:57:09",
+    "folder": "loveobsessed/2026-10-27_hay-algo-que-llevamos-tiempo-preparando",
+    "html_path": "loveobsessed/2026-10-27_hay-algo-que-llevamos-tiempo-preparando/email.html"
+  },
+  {
+    "id": "6ae0cb235c7743d4d876b60e",
+    "brand": "patagonia",
+    "brand_name": "Patagonia",
+    "category": "Técnica",
+    "subject": "Watch our new film Bamb’Amaza",
+    "from_name": "Patagonia Europe",
+    "from_email": "funhogs@emea.patagonia.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-10-27 16:02:41",
+    "folder": "patagonia/2026-10-27_watch-our-new-film-bambamaza",
+    "html_path": "patagonia/2026-10-27_watch-our-new-film-bambamaza/email.html"
+  },
+  {
     "id": "6adfaa562d308cee07a0bab6",
     "brand": "orggeïl",
     "brand_name": "Orggeïl",
