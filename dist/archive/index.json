@@ -1,5 +1,31 @@
 [
   {
+    "id": "6af3793bc2c4af0ba80ad5f1",
+    "brand": "scuffers",
+    "brand_name": "Scuffers",
+    "category": "Streetwear",
+    "subject": "Late night cravings BTS",
+    "from_name": "Scuffers®",
+    "from_email": "help@scuffers.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-10 20:01:22",
+    "folder": "scuffers/2026-11-10_late-night-cravings-bts",
+    "html_path": "scuffers/2026-11-10_late-night-cravings-bts/email.html"
+  },
+  {
+    "id": "6af36906a9173c7e2e636937",
+    "brand": "loveobsessed",
+    "brand_name": "LOVEOBSESSED",
+    "category": "Streetwear",
+    "subject": "Una nueva OPORTUNIDAD a la vista 🫣",
+    "from_name": "David & Carlos · LOVEOBSESSED®",
+    "from_email": "contact@loveobsessed.es",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-10 18:57:04",
+    "folder": "loveobsessed/2026-11-10_una-nueva-oportunidad-a-la-vista",
+    "html_path": "loveobsessed/2026-11-10_una-nueva-oportunidad-a-la-vista/email.html"
+  },
+  {
     "id": "6af2f96a6bff4dc13e612f06",
     "brand": "orggeïl",
     "brand_name": "Orggeïl",
