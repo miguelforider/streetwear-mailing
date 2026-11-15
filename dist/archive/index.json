@@ -1,5 +1,18 @@
 [
   {
+    "id": "6af9c210cae3940cb6758ec1",
+    "brand": "scuffers",
+    "brand_name": "Scuffers",
+    "category": "Streetwear",
+    "subject": "Your favs, reinvented",
+    "from_name": "Scuffers®",
+    "from_email": "help@scuffers.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-15 14:30:36",
+    "folder": "scuffers/2026-11-15_your-favs-reinvented",
+    "html_path": "scuffers/2026-11-15_your-favs-reinvented/email.html"
+  },
+  {
     "id": "6af869b54189e204219092a6",
     "brand": "patagonia",
     "brand_name": "Patagonia",
