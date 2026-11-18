@@ -1,5 +1,31 @@
 [
   {
+    "id": "6afca7bb4f04c50c9d9ae80a",
+    "brand": "nude-project",
+    "brand_name": "Nude Project",
+    "category": "Streetwear",
+    "subject": "BLACK FRIDAY 2026",
+    "from_name": "Nude Project",
+    "from_email": "info@nude-project.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-17 19:15:05",
+    "folder": "nude-project/2026-11-17_black-friday-2026",
+    "html_path": "nude-project/2026-11-17_black-friday-2026/email.html"
+  },
+  {
+    "id": "6afca384e8ce15af158654c4",
+    "brand": "loveobsessed",
+    "brand_name": "LOVEOBSESSED",
+    "category": "Streetwear",
+    "subject": "Cuando se agotan, no vuelven 👀",
+    "from_name": "David & Carlos · LOVEOBSESSED®",
+    "from_email": "contact@loveobsessed.es",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-17 18:57:04",
+    "folder": "loveobsessed/2026-11-17_cuando-se-agotan-no-vuelven",
+    "html_path": "loveobsessed/2026-11-17_cuando-se-agotan-no-vuelven/email.html"
+  },
+  {
     "id": "6af9c210cae3940cb6758ec1",
     "brand": "scuffers",
     "brand_name": "Scuffers",
