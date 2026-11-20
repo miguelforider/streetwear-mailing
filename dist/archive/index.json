@@ -1,5 +1,31 @@
 [
   {
+    "id": "6aff474695bf4e9e1b41c7fa",
+    "brand": "nude-project",
+    "brand_name": "Nude Project",
+    "category": "Streetwear",
+    "subject": "WIN YOUR BLACK FRIDAY WISHLIST",
+    "from_name": "Nude Project",
+    "from_email": "info@nude-project.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-19 19:00:20",
+    "folder": "nude-project/2026-11-19_win-your-black-friday-wishlist",
+    "html_path": "nude-project/2026-11-19_win-your-black-friday-wishlist/email.html"
+  },
+  {
+    "id": "6aff4685e3bb6ae0a2e7104d",
+    "brand": "loveobsessed",
+    "brand_name": "LOVEOBSESSED",
+    "category": "Streetwear",
+    "subject": "🎮 Tu próxima misión empieza aquí: BLACK FRIDAY",
+    "from_name": "David & Carlos · LOVEOBSESSED®",
+    "from_email": "contact@loveobsessed.es",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-19 18:57:04",
+    "folder": "loveobsessed/2026-11-19_tu-próxima-misión-empieza-aquí-black-fri",
+    "html_path": "loveobsessed/2026-11-19_tu-próxima-misión-empieza-aquí-black-fri/email.html"
+  },
+  {
     "id": "6afec1a1a3f4a915bde88dae",
     "brand": "orggeïl",
     "brand_name": "Orggeïl",
