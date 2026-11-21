@@ -1,5 +1,31 @@
 [
   {
+    "id": "6b01a4dacbc680129993478d",
+    "brand": "patagonia",
+    "brand_name": "Patagonia",
+    "category": "Técnica",
+    "subject": "Our picks to get them out there",
+    "from_name": "Patagonia Europe",
+    "from_email": "funhogs@emea.patagonia.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-21 14:04:09",
+    "folder": "patagonia/2026-11-21_our-picks-to-get-them-out-there",
+    "html_path": "patagonia/2026-11-21_our-picks-to-get-them-out-there/email.html"
+  },
+  {
+    "id": "6b0180c82fcc69de58c971f7",
+    "brand": "orggeïl",
+    "brand_name": "Orggeïl",
+    "category": "Streetwear",
+    "subject": "🚨ORGGEÏL BLACK FRIDAY🚨",
+    "from_name": "[ORGGEÏL]",
+    "from_email": "management@orggeil.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-21 11:30:14",
+    "folder": "orggeïl/2026-11-21_orggeïl-black-friday",
+    "html_path": "orggeïl/2026-11-21_orggeïl-black-friday/email.html"
+  },
+  {
     "id": "6aff474695bf4e9e1b41c7fa",
     "brand": "nude-project",
     "brand_name": "Nude Project",
