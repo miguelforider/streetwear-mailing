@@ -1,5 +1,31 @@
 [
   {
+    "id": "6b0358d82c607585c7377778",
+    "brand": "orggeïl",
+    "brand_name": "Orggeïl",
+    "category": "Streetwear",
+    "subject": "👀DISCOVER THE NEW PIECES👀",
+    "from_name": "[ORGGEÏL]",
+    "from_email": "management@orggeil.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-22 21:04:23",
+    "folder": "orggeïl/2026-11-22_discover-the-new-pieces",
+    "html_path": "orggeïl/2026-11-22_discover-the-new-pieces/email.html"
+  },
+  {
+    "id": "6b033bb826e557ac92371e1a",
+    "brand": "nude-project",
+    "brand_name": "Nude Project",
+    "category": "Streetwear",
+    "subject": "JUST 24H LEFT FOR BLACK FRIDAY",
+    "from_name": "Nude Project",
+    "from_email": "info@nude-project.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-22 19:00:06",
+    "folder": "nude-project/2026-11-22_just-24h-left-for-black-friday",
+    "html_path": "nude-project/2026-11-22_just-24h-left-for-black-friday/email.html"
+  },
+  {
     "id": "6b02f91a2886c9e768e7a306",
     "brand": "scuffers",
     "brand_name": "Scuffers",
