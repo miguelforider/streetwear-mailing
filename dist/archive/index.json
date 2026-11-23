@@ -1,5 +1,44 @@
 [
   {
+    "id": "6b048dd5446e998570505b3a",
+    "brand": "orggeïl",
+    "brand_name": "Orggeïl",
+    "category": "Streetwear",
+    "subject": "🚨48H LEFT🚨",
+    "from_name": "[ORGGEÏL]",
+    "from_email": "management@orggeil.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-23 19:02:35",
+    "folder": "orggeïl/2026-11-23_48h-left",
+    "html_path": "orggeïl/2026-11-23_48h-left/email.html"
+  },
+  {
+    "id": "6b048d9107c5a839bb37b5c3",
+    "brand": "nude-project",
+    "brand_name": "Nude Project",
+    "category": "Streetwear",
+    "subject": "BLACK FRIDAY IS HERE: Early Access",
+    "from_name": "Nude Project",
+    "from_email": "info@nude-project.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-23 19:01:36",
+    "folder": "nude-project/2026-11-23_black-friday-is-here-early-access",
+    "html_path": "nude-project/2026-11-23_black-friday-is-here-early-access/email.html"
+  },
+  {
+    "id": "6b048c0d1c6a57cd5652c281",
+    "brand": "scuffers",
+    "brand_name": "Scuffers",
+    "category": "Streetwear",
+    "subject": "Black Friday is in 24h. Be first in",
+    "from_name": "Scuffers®",
+    "from_email": "help@scuffers.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-23 18:55:05",
+    "folder": "scuffers/2026-11-23_black-friday-is-in-24h-be-first-in",
+    "html_path": "scuffers/2026-11-23_black-friday-is-in-24h-be-first-in/email.html"
+  },
+  {
     "id": "6b0358d82c607585c7377778",
     "brand": "orggeïl",
     "brand_name": "Orggeïl",
