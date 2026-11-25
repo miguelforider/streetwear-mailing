@@ -1,5 +1,31 @@
 [
   {
+    "id": "6b05ed9a86fc064b05f073cc",
+    "brand": "orggeïl",
+    "brand_name": "Orggeïl",
+    "category": "Streetwear",
+    "subject": "🚨24H LEFT - PLEASE READ🚨",
+    "from_name": "[ORGGEÏL]",
+    "from_email": "management@orggeil.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-24 20:03:30",
+    "folder": "orggeïl/2026-11-24_24h-left-please-read",
+    "html_path": "orggeïl/2026-11-24_24h-left-please-read/email.html"
+  },
+  {
+    "id": "6b05ecd6658b6c4acdbd46d3",
+    "brand": "scuffers",
+    "brand_name": "Scuffers",
+    "category": "Streetwear",
+    "subject": "BLACK FRIDAY IS NOW LIVE",
+    "from_name": "Scuffers®",
+    "from_email": "help@scuffers.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-24 20:00:18",
+    "folder": "scuffers/2026-11-24_black-friday-is-now-live",
+    "html_path": "scuffers/2026-11-24_black-friday-is-now-live/email.html"
+  },
+  {
     "id": "6b05dfbd7c31ae9a991722ec",
     "brand": "scuffers",
     "brand_name": "Scuffers",
