@@ -1,5 +1,18 @@
 [
   {
+    "id": "6b08900779acd76da4890060",
+    "brand": "scuffers",
+    "brand_name": "Scuffers",
+    "category": "Streetwear",
+    "subject": "Our picks for you",
+    "from_name": "Scuffers®",
+    "from_email": "help@scuffers.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-26 20:00:59",
+    "folder": "scuffers/2026-11-26_our-picks-for-you",
+    "html_path": "scuffers/2026-11-26_our-picks-for-you/email.html"
+  },
+  {
     "id": "6b08737e463a8617c2d27fa5",
     "brand": "orggeïl",
     "brand_name": "Orggeïl",
@@ -11,6 +24,19 @@
     "date": "2026-11-26 17:59:22",
     "folder": "orggeïl/2026-11-26_black-friday-live-now",
     "html_path": "orggeïl/2026-11-26_black-friday-live-now/email.html"
+  },
+  {
+    "id": "6b083bdf6c3c7c54fa8efffd",
+    "brand": "patagonia",
+    "brand_name": "Patagonia",
+    "category": "Técnica",
+    "subject": "Hope Zones",
+    "from_name": "Patagonia Europe",
+    "from_email": "funhogs@emea.patagonia.com",
+    "to": "streetwear_moto_8asc@maxxspace.com",
+    "date": "2026-11-26 14:02:04",
+    "folder": "patagonia/2026-11-26_hope-zones",
+    "html_path": "patagonia/2026-11-26_hope-zones/email.html"
   },
   {
     "id": "6b07314edd157267ac5c119a",
